@@ -1,0 +1,179 @@
+page{
+  background-color: #fff;
+  padding:20rpx;
+}
+.title-area{
+  font-size: 38rpx;
+  font-weight: bold;
+  line-height: 45rpx;
+  text-align: center;
+  padding: 0 50rpx 0 20rpx;
+}
+.content-area{
+  font-size: 30rpx;
+  padding: 0 50rpx 0 20rpx;
+}
+
+.user{
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  height: 160rpx;
+  background-color: #fff;
+}
+.usericon{
+  width: 160rpx;
+  height: 160rpx;
+}
+.userinfo{
+  margin:0 20rpx;
+  height: 160rpx;
+  width: 350rpx;
+}
+.username{
+  font-size: 26rpx;
+  line-height: 40rpx;
+  height: 40rpx;
+}
+.userlevel{
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  height: 40rpx;
+}
+.qiandao{
+  height: 160rpx;
+  width: 160rpx;
+}
+.qdbtn{
+  line-height: 50rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  width: 100rpx;
+  border-radius: 10rpx;
+  background-color: #69f;
+  color: #fff;
+  text-align: center;
+  margin-top: 55rpx;
+  margin-left: 30rpx;
+}
+.noqdbtn{
+  line-height: 50rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  width: 100rpx;
+  border-radius: 10rpx;
+  background-color: #999;
+  color: #fff;
+  text-align: center;
+  margin-top: 25rpx;
+  margin-left: 30rpx;
+}
+.tianshu{
+  color: #999;
+  font-size: 22rpx;
+  margin-top: 10rpx;
+}
+.tabarea{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  padding-left: 20rpx;
+}
+.tab-item{
+  font-size: 32rpx;
+  margin:0 10rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+.cur-tab{
+  font-weight: bold;
+  border-bottom: 5rpx solid #000;
+}
+.zhiding{
+  padding:0 20rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.zhiding-left{
+  width: 100rpx;
+  text-align: center;
+  color: #748fb5;
+}
+.zhiding-title{
+  font-weight: bold;
+}
+.article-area{
+  margin-top: 20rpx;
+}
+.article-item{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding:20rpx; 
+  margin: 20rpx 0;       
+}
+.line1{
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+}
+.article-usericon{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 80rpx;
+}
+.article-username{
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.username-1{
+  font-weight: bold;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+.username-2{
+  font-size: 26rpx;
+  color: #b9b9b9;
+  line-height: 40rpx;
+  height: 40rpx;
+}
+.line2{
+  display: flex;
+  flex-direction: column;
+}
+.article-content{
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+.article-img{
+  height: 210rpx;
+  display: flex;
+  flex-direction: row;
+}
+.half-pic{
+  width: 210rpx;
+  margin: 15rpx;
+  background-color: #f7f7f7;
+}
+.add-article{
+  position: fixed;
+  bottom: 80rpx;
+  left: 325rpx;
+  z-index: 999;
+  background-color: #69f;
+  color: #fff;
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 100rpx;
+  font-size: 120rpx;
+  text-align: center;
+}

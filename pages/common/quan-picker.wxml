@@ -1,0 +1,33 @@
+<view wx:if="{{quan_picker}}">
+    <view class='lucent'></view>
+    <view class='quan-area'>
+      <view class='option-picker-inner' style='overflow-y: scroll;position: absolute;top:10rpx;bottom:90rpx;'>
+        <block wx:for="{{quan_list}}" wx:key="{{index}}">
+          <view class='quan-item'>
+            <view class='quan-left dahu-bg-orange'>
+              <view class='quan-money'>{{item.money}}</view>
+              <view class='quan-condition'>{{item.name}}</view>
+            </view>
+            <view class='quan-mid'>
+              <view class='quan-type'>购物抵用券</view>
+              <view class='quan-shengyu disNone'>剩余{{item.remain_num}}张</view>
+              <view class='quan-endtime'>有效期至：{{item.use_end_time}}</view>
+            </view>
+            <view class='quan-right' wx:if="{{is_cart}}">
+              <view class='quan-firmbtn' data-index="{{index}}" bindtap='setquan'>选择</view>
+            </view>
+          </view>
+        </block>
+        <view class='quan-option-picker-btn' bindtap='setquandefault' wx:if="{{is_cart}}">
+          不使用优惠券
+        </view>
+        <view class='quan-option-picker-btn' bindtap='hidequan' wx:else>
+          确定
+        </view>
+        <!-- <view class='option-picker-btn' bindtap='hidequan'>
+          确定
+        </view> -->
+
+      </view>
+    </view>
+</view>

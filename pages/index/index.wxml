@@ -1,0 +1,157 @@
+<view>
+  <!--搜索   begin-->
+  <view class="header {{scrollDown?'scrolled':''}}">
+    <navigator class="location ellipsis" url='/pages/mendian/list'>
+      <image class="icon" src="../../images/icon_location.png" />
+      {{position}} >
+    </navigator>
+    <view class="search">
+      <view class="searchItem">
+        <image src="../../images/icon_search.png" bindtap='go_search'/>
+        <input placeholder="祺然片" bindblur='set_keyword'></input>
+      </view>
+    </view>
+  </view>
+  <!--搜索   end-->
+
+  <!--选项卡-->
+
+<scroll-view scroll-x class="navi-scroll">
+  <view data-num="1" url="/pages/index/index" class="navitab {{_num==1?'curtab':''}}" bindtap="changecur">
+  商城
+  </view>
+  <navigator data-num="2" class="navitab {{_num==2?'curtab':''}}" bindtap="changecur"  url='/pages/community/community'>
+  社区
+  </navigator>
+</scroll-view>
+
+
+  <view style="width:95%;margin:0rpx  auto">
+    <view class="list">
+      <navigator class="card" url='/pages/product/list?type=0&intro=is_hot'>
+        <image src="https://www.dhdjk.net/uploads/wxapp/appimg/banner1.jpg" mode="widthFix"/>
+      </navigator>
+      <view wx:for="{{banner}}" class="card">
+        <image src="{{item.picpath}}" bindtap="navigator" data-catid="{{item.id}}" mode="widthFix" />
+      </view>
+    </view>
+    <view style="height:400rpx;width:100%;margin-top:20rpx">      
+      <view class='top40'>
+        <txv-video vid="{{videoid}}" playerid="txv1" autoplay="{{false}}"></txv-video>
+      </view>
+    </view>
+    <!--关于大湖  begin-->
+    <view class="aboutDahu">
+      <view class="win">
+        <button style="background:#19a697;color:#fff" loading="{{isLoading}}" bindtap="submitHandler" disabled="{{isDisable}}">{{buttonText}}</button>
+      </view>
+      <view class="dahuInfo">
+        <view style="width: 50%;float: left;height: 173rpx;padding-right: 24rpx;">
+          <image src="https://www.dhdjk.net/uploads/wxapp/appimg/dahulogo.png" />
+        </view>
+        <view class="dahuText" style="">
+          {{dahuText}}
+        </view>
+        <view style="clear:both"></view>
+      </view>
+      <!--轮播  begin-->
+      <view class="broadcast">
+        <swiper indicator-dots class="three_swiper section icons" circular current="0" indicator-color="rgba(51, 51, 51, 0.3)" indicator-active-color="#ff2a00">
+          <swiper-item wx:for="{{items2}}" wx:for-item="list" wx:key="id">
+            <view class="icon iconImg" wx:for="{{list}}" wx:for-item="icon" wx:key="id" bindtap="toNearby">
+              <navigator url="/pages/tuwen/content?type_id=1&id={{icon.id}}">
+                <image src="{{icon.imgpath}}" mode="aspectFill" />
+                <text>{{icon.desc}}</text>
+              </navigator>
+            </view>
+          </swiper-item>
+        </swiper>
+      </view>
+      <!--轮播   end-->
+      <navigator class="moreText" url="/pages/tuwen/chuidiao">更多</navigator>
+    </view>
+    <!--关于大湖  end-->
+
+    <navigator style="height:400rpx;width:100%;margin:20rpx 0rpx;" url='/pages/user/infoset'>
+      <image src="https://www.dhdjk.net/uploads/wxapp/appimg/joinRemeber.jpg"/>
+    </navigator>
+
+    <!--Coupon 优惠券 begin-->
+    <view class="Coupon">
+      <view class="couponTit">/ 专享福利　天天优惠 /</view>
+      <view class="ui-row" style="margin-bottom: 40rpx;" bindtap='gotoquan'>
+        <view class="ui-col ui-col-align-center align-center valign-middle" style="padding-left: 20rpx;padding-right: 20rpx;">
+          <view class="ui-col-content align-center valign-middle">
+            <image src="../../images/coupon.png" mode="widthFix" />
+          </view>
+        </view>
+        <view class="ui-col ui-col-align-center align-center valign-middle" style="padding-left: 20rpx;padding-right: 10rpx;">
+          <view class="ui-col-content align-center valign-middle">
+            <image src="../../images/coupon2.png" mode="widthFix" />
+          </view>
+        </view>
+        <view class="ui-col ui-col-align-center align-center valign-middle" style="padding-left: 20rpx;padding-right: 10rpx;">
+          <view class="ui-col-content align-center valign-middle">
+            <image src="../../images/coupon3.png" mode="widthFix" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--Coupon 优惠券 end-->
+
+    <!--近期促销  begin-->
+    <view class="promotion">
+      <view class="promotionTitEn">PROMOTION</view>
+      <view class="promotionTitCh">近 期 促 销</view>
+      <!--轮播  begin-->
+      <view class="promotionView">
+        <swiper indicator-dots class="three_swiper section icons" circular current="0" indicator-color="rgba(51, 51, 51, 0.3)" indicator-active-color="#ff2a00">
+          <swiper-item wx:for="{{goodsDiscount}}" wx:for-item="list1" wx:key="id">
+            <view class="icon iconImg" wx:for="{{list1}}" wx:for-item="icon1" wx:key="id" bindtap="toNearby">
+              <navigator url="/pages/details/details?pro_id={{icon1.id}}">
+                <image src="{{icon1.picsrc}}" mode="aspectFill" />
+                <text>{{icon1.title}}</text>
+                <view style="font-size:22rpx"><span style="color:#000">会员价：<span style="color:#a2a2a2;text-decoration:line-through">¥{{icon1.yuanjia}}</span>　<span style="color:#ff5555;font-size:30rpx">¥{{icon1.shoujia}}</span></span></view>
+              </navigator>
+            </view>
+          </swiper-item>
+        </swiper>
+      </view>
+      <!--轮播   end-->
+      <navigator class="moreText" url='/pages/product/list?type=0&intro=is_hot'>更多</navigator>
+    </view>
+    <!--近期促销   end-->
+
+    <!--积分兑换商城  POINTS EXCHANGE  begin-->
+    <view class="PointsShopping">
+      <view class="promotionTitEn">POINTS EXCHANGE</view>
+      <view class="PointsShoppingTitCh">积 分 兑 换 商 城</view>
+      <!--轮播  begin-->
+      <view class="promotionView">
+        <swiper indicator-dots class="three_swiper section icons" circular current="0" indicator-color="rgba(51, 51, 51, 0.3)" indicator-active-color="#ff2a00">
+          <swiper-item wx:for="{{goodsIntegral}}" wx:for-item="list2" wx:key="id">
+            <view class="icon iconImg" wx:for="{{list2}}" wx:for-item="icon2" wx:key="id" bindtap="toNearby">
+              <navigator url="/pages/scoreproduct/details?pro_id={{icon2.id}}">
+                <image src="{{icon2.img}}" mode="aspectFill" />
+                <text>{{icon2.goods_name}}</text>
+                <view style="font-size:24rpx"><span style="color:#000">积分兑换价:<span style="color:#ff5555;font-size:20rpx;">{{icon2.score}}</span></span></view>
+              </navigator>
+            </view>
+          </swiper-item>
+        </swiper>
+      </view>
+      <!--轮播   end-->
+      <navigator class="moreText" url='/pages/scoreproduct/list'>更多</navigator>
+    </view>
+    <!--积分兑换商城  POINTS EXCHANGE  end-->
+
+
+  </view>
+
+
+
+
+
+  <!--选项卡  end-->
+
+</view>

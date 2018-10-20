@@ -1,0 +1,150 @@
+/* 1像素解决方案 */
+/*
+ * 清除1px
+ */
+/*
+ * 清除浮动
+ */
+/*
+ * mobile
+ */
+/*
+ * 1px
+ */
+/*
+ * text
+ */
+/* 垂直居中 */
+/* 水平居中 */
+/* 水平垂直居中 */
+/* 超出部分出省略号 */
+/* 多行文本超出部分省略号 */
+.shequDetails {
+  width: 95%;
+  margin: 0px auto;
+  position: relative;
+}
+.userInfo {
+  width: 100%;
+  margin-bottom: 10rpx;
+}
+.clear {
+  clear: both;
+}
+.hpImg {
+  width: 110rpx;
+  height: 110rpx;
+  float: left;
+  border-radius: 100rpx;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.name {
+  font-size: 26rpx;
+  line-height: 63rpx;
+  color: #000;
+  font-weight: 600;
+}
+.timeAddress {
+  font-size: 26rpx;
+  color: #b9b9b9;
+}
+.articleText {
+  width: 100%;
+  color: #000;
+  font-size: 29rpx;
+  line-height: 55rpx;
+}
+.articleImg {
+  width: 100%;
+  height: 100%;
+}
+.caozuo {
+  text-align: right;
+  color: #999999;
+  margin: 18rpx 0px;
+  font-size: 24rpx;
+}
+.comment {
+  width: 100%;
+}
+.commentView {
+  width: 90%;
+  margin-left: 10%;
+  height: 100%;
+  margin-bottom: 8rpx;
+}
+.commentFlex {
+  display: flex;
+}
+.commentFlex view {
+  flex: 1;
+  font-size: 26rpx;
+  color: #444444;
+}
+.commentLiuyan {
+  font-size: 26rpx;
+  color: #444444;
+  text-align: justify;
+}
+.commentText {
+  font-size: 24rpx;
+  color: #999999;
+  margin: 25rpx 0px;
+}
+.lookAll {
+  font-size: 27rpx;
+  color: #8590a6;
+  width: 90%;
+  margin-left: 10%;
+  margin-bottom: 25rpx;
+}
+.text_area{
+  border:1px solid #b5b4b4;height:110rpx;width:100%;
+  display:block;
+  position:relative;
+}
+.send {
+  width:160rpx;
+  text-align:center;
+  background:#2196f3;
+  color:#fff;
+  line-height:70rpx;
+  float:right;
+  margin-top: 15rpx;
+}
+.articleDetails {
+  position: relative;
+}
+
+
+textarea {
+  padding: 1rpx 0;
+}
+
+.hide{
+  display: none
+}
+
+
+.nullPinglun{
+  text-align: center;
+  width: 100%;
+  margin: 15rpx 0px;
+  color: #888
+}
+
+.text_area_box{
+  transition: 1s;
+}
+
+.article-img{
+  height: 210rpx;
+  display: flex;
+  flex-direction: row;
+}
+.half-pic{
+  width: 210rpx;
+  margin: 15rpx;
+  background-color: #f7f7f7;
+}

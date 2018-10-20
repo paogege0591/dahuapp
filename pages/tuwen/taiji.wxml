@@ -1,0 +1,22 @@
+<view>
+<block wx:for="{{list}}" wx:key="index">
+  <navigator class='article-item' url="/pages/tuwen/content?type_id=2&id={{item.id}}">
+    <view class='article-img'>
+      <image class='full-pic' src="{{item.img}}"></image>
+    </view>
+    <view class='article-title'>
+      {{item.title}}
+    </view>
+  </navigator>
+</block>
+  <!--
+  <navigator class='article-item' url="/pages/tuwen/content">
+    <view class='article-img'>
+      <image class='full-pic' src="https://www.zydtest.cn/public/static/images/navipic.jpg"></image>
+    </view>
+    <view class='article-title'>
+      太极乐园文章标题2
+    </view>
+  </navigator>
+  -->
+</view>

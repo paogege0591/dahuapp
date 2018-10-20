@@ -1,0 +1,128 @@
+<!--pages/scoreproduct/exchange.wxml-->
+<!-- 收货地址区域 -->
+<view class='reciever-area' bindtap='chooseaddr'>
+  <!-- 有收货地址 -->
+  <view class="{{reciever?'':'disNone'}}">
+    <view class='icon-area'>
+      <icon class='iconfont icon-location' style='font-size:40rpx;'></icon>
+    </view>
+    <view class='reciever-right'>
+    >
+    </view>
+    <view class='reciever-name-telnum'>
+      收货人:{{reciever.name}}　　{{reciever.telnum}}
+    </view>
+    <view class='reciever-addr'>
+      {{reciever.address}}
+    </view>
+  </view>
+  <!-- 无收货地址 -->
+  <view class="{{reciever?'disNone':''}}">
+    <view class='reciever-right'>
+    >
+    </view>
+    <view class='reciever-add'>
+      <view class='add'>+</view>
+      <view class='add-text'>选择收货地址</view>
+    </view>
+  </view>
+</view>
+
+<!-- 配送方式 -->
+<view class='peisong'>
+  <view class='peisong-title'>配送方式</view>
+  <view class='peisong-right' bindtap='showmendian'>
+    <view><icon class='iconfont icon-mendian' style='font-size:80rpx;'></icon></view>
+    <view class='peisong-mendian'>选择其他门店</view>
+  </view>
+  <view class='peisong-radio'>
+    <radio-group class='radio-group' bindchange='radioChange'>
+      <radio class='radio' value="0" checked="true">
+        <text>门店发货</text>
+        <icon class='iconfont icon-location mendian-msg' bindtap="selectPosition">({{mendian.name}})距离{{mendian.distance}}</icon>
+      </radio>
+      <radio class='radio' value="1">
+        <text>门店自提</text>
+      </radio>
+    </radio-group>
+  </view>
+</view>
+
+<!-- 商品展示 -->
+<view>
+<view wx:for="{{pro_msg}}" class='proshow'>
+  <view class='propic'>
+    <image src="{{item.goods_img}}" class='full-pic'></image>
+  </view>
+  <view class='promid'>  
+    <view class='proname'>{{item.goods_name}}</view>
+    <view class='pro-spec'>{{item.spec_key_name}}</view>
+  </view>  
+  <view class='pro-right'>
+    <view>积分:￥{{item.score}}</view>
+    <view>数量:{{item.goods_num}}</view>
+  </view>
+</view>
+</view>
+
+<!-- 发票和优惠券 -->
+<view class='quan-fapiao'>
+  <!-- 发票 -->
+  <view class='quan-fapiao-item' bindtap='showfapiao'>
+    <view class='right-more'>
+      <icon class='iconfont icon-msnui-more'></icon>
+    </view>
+    <view class='quan-fapiao-title'>发票</view>
+    <view class='quan-fapiao-mode'>{{fapiao.title}}</view>
+    <view class='quan-fapiao-taxnum' wx:if="{{fapiao.taxNumber}}">税号：{{fapiao.taxNumber}}</view>
+  </view>
+</view>
+
+<!-- 买家留言 -->
+<view class='liuyan'>
+  <view class='liuyan-left'>
+    买家留言
+  </view>
+  <view class='liuyan-right'>
+    <textarea style='height:150rpx;font-size:28rpx;' placeholder='50字以内（选填）' placeholder-style='font-size:26rpx;' maxlength='50' cursor-spacing='40' bindinput="user_note">
+    
+    </textarea>
+  </view>  
+</view>
+
+<!-- 价格显示 -->
+<view class='price-area'>
+  <!-- 商品价格 -->
+  <view class='price-pro'>
+    <view class='price-pro-left'>
+    所需积分
+    </view>
+    <view class='price-pro-right'>
+    ￥{{totalscore}}
+    </view>
+  </view>
+  <!-- 运费 -->
+  <view class='price-pro'>
+    <view class='price-pro-left'>
+    运费
+    </view>
+    <view class="price-pro-right">
+    ￥{{yunfei}}
+    </view>
+  </view>
+</view>
+
+<!-- 底部区域 -->
+<view class='view-foot'>
+  <view class='foot-mid'>
+    需付运费： <view class='foot-price'>{{yunfei}}元</view>
+  </view>
+  <view class='foot-right' bindtap="exchange">
+    立刻兑换 
+  </view>
+</view>
+
+<!-- 门店弹出层 -->
+<include src='/pages/common/mendian-picker.wxml'></include>
+<include src='/pages/common/addr-picker.wxml'></include>
+<include src='/pages/common/fapiao-picker.wxml'></include>

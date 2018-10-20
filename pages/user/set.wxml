@@ -1,0 +1,70 @@
+<view>
+  <view class="ui-row-list ui-row-list-border-indent" style="">
+    <view style="height:100rpx;" class="ui-row">
+      <view class="text ui-col" style="color:#5d5d5d;font-size:26rpx;">
+        <view class="ui-col-content">
+          当前登录账号
+        </view>
+      </view>
+    </view>
+    <view style="height:160rpx;" bindtap="navigator" data-link="/pages/user/infoset" class="ui-row">
+      <view class="picarea ui-col ui-col-align-center align-center valign-middle" style="flex:0 0 60px;">
+        <view class="ui-col-content align-center valign-middle">
+          <image src="{{user.avatar}}" mode="widthFix" />
+        </view>
+      </view>
+      <view class="text ui-col" style="margin-left：25rpx;">
+        <view class="ui-col-content">
+          <view style="height: 33px;color: #262626;font-size: 34rpx;">{{user.nickname}}</view>
+          <view style="height: 27px;color: #666666;font-size: 26rpx;">{{user.level_name}}</view>
+        </view>
+      </view>
+      <view style="color: #262626;margin-right：30rpx;flex:0 0 110px;" class="ui-col valign-middle">
+        <view class="ui-col-content valign-middle">
+          会员资料设置
+        </view>
+      </view>
+    </view>
+    <view style="height:100rpx;" bindtap="navigator" data-link="/pages/user/bindtel" class="ui-row">
+      <view class="ui-col ui-col-align-center align-center valign-middle" style="flex:0 0 40px;">
+        <view class="ui-col-content align-center valign-middle">
+          <i class="iconfont icon-shouji" style="font-size:40rpx;color:#000"></i>
+        </view>
+      </view>
+      <view class="text ui-col" style="color: #262626;">
+        <view class="ui-col-content">
+          绑定手机号码管理
+        </view>
+      </view>
+      <view class="ui-col valign-middle" style="flex:0 0 90px;">
+        <view class="ui-col-content valign-middle">
+          <text style="color: #666666;">{{user.mobile}}</text>
+        </view>
+      </view>
+      <view class="ui-col valign-middle" style="flex:0 0 25px;">
+        <view class="ui-col-content valign-middle">
+          <span type="arrow-right" class="ui-icon icon-arrow-right" style="font-size: 16px;"></span>
+        </view>
+      </view>
+    </view>
+    <view style="height:100rpx;" bindtap="navigator" data-link="{{ item.link  }}" wx:for="{{ groups }}" class="ui-row">
+      <view class="ui-col ui-col-align-center align-center valign-middle" style="flex:0 0 40px;">
+        <view class="ui-col-content align-center valign-middle">
+          <i class="iconfont {{item.iconfont}}" style="font-size:40rpx;color:#000"></i>
+        </view>
+      </view>
+      <view class="text ui-col" style="color: #262626;">
+        <view class="ui-col-content">
+          {{item.title}}
+        </view>
+      </view>
+      <view class="ui-col valign-middle" style="flex:0 0 25px;">
+        <view class="ui-col-content valign-middle">
+          <span type="arrow-right" class="ui-icon icon-arrow-right" style="font-size: 16px;"></span>
+        </view>
+      </view>
+    </view>
+
+    <hr />
+  </view>
+</view>

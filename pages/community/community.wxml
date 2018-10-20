@@ -1,0 +1,91 @@
+<!-- 用户信息fixed -->
+
+<view class='user' wx:if="{{userinfo == ''}}">
+  <view class='usericon'>
+    <image class='full-pic' src='/static/image/avatar.png'>
+    </image>
+  </view>
+  <view class='userinfo'>
+    <view class='username'>游客</view>
+  </view>
+</view>
+<view class='user' wx:else>
+  <view class='usericon'>
+    <image class='full-pic' src='{{userinfo.avatar}}'>
+    </image>
+  </view>
+  <view class='userinfo'>
+    <view class='username'>{{userinfo.nickname}}</view>
+    <view class='userlevel'>{{userinfo.community_level_name}}</view>
+    <progress percent="{{userinfo.progress}}" stroke-width="12" />
+  </view>
+  <view class='qiandao'>
+    <view class='noqdbtn' wx:if="{{userinfo.is_sign}}">已签到</view>
+    <view class='qdbtn' wx:else bindtap="sign_in">签到</view>
+    <view class='tianshu'>已连续签到{{userinfo.continue_sign_days}}天</view>
+  </view>
+</view>
+
+
+<!-- 标签 -->
+<view class='tabarea'>
+  <view data-num='1' class="tab-item {{num==1?'cur-tab':''}}" bindtap='changetab' data-type-id="0">全部</view>
+  <view data-num='2' class="tab-item {{num==2?'cur-tab':''}}" bindtap='changetab' data-type-id="1">精华</view>
+</view>
+
+<!-- 置顶 -->
+<block wx:for="{{top_list}}" wx:key="{{index}}">
+  <view class='zhiding'>
+    <view class='zhiding-left'>置顶</view>
+    <navigator class='zhiding-title' url="/pages/community/shequ?article_id={{item.id}}">【置顶文章】{{item.title}}</navigator>
+  </view>
+</block>
+
+<!-- 列表区域 -->
+<view class='article-area'>
+  <block wx:for="{{list}}" wx:key="{{index}}">
+    <view class='article-item'>
+      <navigator class='line1' url="/pages/community/shequ?article_id={{item.id}}">
+        <view class='article-usericon'>
+          <image src='{{item.user.avatar}}' class='full-pic article-usericon'></image>
+        </view>
+        <view class='article-username'>
+          <view class='username-1'>
+            {{item.user.nickname ? item.user.nickname : item.user.username}}
+          </view>
+          <view class='username-2'>
+            {{item.time_diff}} | {{item.address}}
+          </view>
+        </view>
+      </navigator>
+      <view class='line2'>
+        <view class='article-content'>
+          {{item.content}}
+        </view>
+        <view class='article-img' wx:if="{{item.photo}}">
+          <block wx:for="{{item.photo}}" wx:for-item="vo">
+            <view class='half-pic' bindtap="showImage" data-url="{{vo.url}}">
+              <image src='{{vo.url}}' mode="aspectFit" class='full-pic'></image>
+            </view>
+          </block>
+          <!-- <image src='{{vo.url}}' class='half-pic'></image> -->
+        </view>
+        <!--zan-->
+        <view class='zanView'>
+          <span style="color:#b9b9b9;font-size:24rpx;" bindtap='dianzan' data-aid="{{item.id}}" data-already="{{item.already_dianzan}}">
+            <i class="iconfont {{item.already_dianzan?'icon-dianzan-choose':'icon-dianzan'}} iconZan"></i>{{item.nums.d_num}} 赞
+          </span>
+          <span style="color:#b9b9b9;font-size:24rpx;">
+            <i class="iconfont icon-daipingjia-copy iconZan"></i>{{item.nums.r_num}} 评论
+          </span>
+        </view>
+        <!--zan-->
+      </view>
+    </view>
+  </block>
+</view>
+
+
+<navigator class='add-article' url='/pages/community/addarticle'>
+  <view style='margin-top:-10rpx;'>+</view>
+</navigator>

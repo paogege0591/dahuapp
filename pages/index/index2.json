@@ -1,0 +1,9 @@
+{
+"backgroundTextStyle": "light",
+"navigationBarBackgroundColor": "#fff",
+"navigationBarTextStyle": "black",
+"navigationBarTitleText": "大湖大健康",
+"usingComponents": {
+    "txv-video": "plugin://tencentvideo/video"
+  }
+}

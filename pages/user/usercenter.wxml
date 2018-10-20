@@ -1,0 +1,200 @@
+<view style="width:100%;height:100%;overflow-x:hidden">
+  <!--用户  begin-->
+  <view class="userinfo">
+    <view class="userinfoContainer">    
+      <block wx:if="{{userinfo == ''||userinfo.nickname==''}}">
+        <view class="headPic">
+          <view class="picarea ">
+            <image src="/static/image/avatar.png" class='full-pic' mode="widthFix" />
+          </view>
+          <view class="headName">
+            <view class="rememberName" style="">游客</view>
+          </view>
+          <view style="clear:both"></view>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="headPic">
+          <view class="picarea ">
+            <image src="{{userinfo.avatar}}" class='full-pic' mode="widthFix" />
+          </view>
+          <view class="headName">
+            <view class="rememberName" style="">{{userinfo.nickname}}</view>
+            <view class="rememberIcon" style="">
+              <i class="iconfont icon-huiyuan" style="font-size:32rpx;margin: 0rpx 12rpx;color:#fe8d2b"></i>{{userinfo.level_name}}
+            </view>
+          </view>
+          <view style="clear:both"></view>
+        </view>
+        <view class="headSet">
+          <navigator url="/pages/user/set">设置</navigator>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!--用户  end-->
+
+  <view class="userContainer">
+    <!--用户权益  begin-->
+    <view class="userInterest">
+      <view style='width:98%;margin:0rpx;display:flex'>
+          <view class="userInterest-card">
+            <navigator url='/pages/user/integral'>
+              <view class="userInterest-num">
+                <block wx:if="{{userinfo == ''||userinfo.nickname==''}}">0</block>
+                <block wx:else>{{userinfo.score}}</block>
+                <sub style="font-size:20rpx;">分</sub></view>
+              <view class="userInterest-text">积分奖励</view>
+            </navigator>
+          </view>
+          <view class="userInterest-card">
+            <navigator url='/pages/user/yue'>
+              <view class="userInterest-num">
+              <block wx:if="{{userinfo == ''||userinfo.nickname==''}}">0.00</block>
+              <block wx:else>{{userinfo.account_balance}}</block>
+              <sub style="font-size:20rpx;">元</sub></view>
+              <view class="userInterest-text">账户余额</view>
+            </navigator>
+          </view>
+          <view class="userInterest-card">
+            <navigator url="">
+              <view class="userInterest-img userInterest-zhekou " style="">
+              </view>
+              <view class="userInterest-text">会员折扣</view>
+            </navigator>
+          </view>
+          <view class="userInterest-card userInterest-card-leftborder">
+            <navigator url="">
+              <view class="userInterest-img userInterest-zhuanxiang" style="">
+                <!-- <image src="../../images/zhuanxiang.png"> -->
+              </view>
+              <view class="userInterest-text">专享活动</view>
+              <view style="width:2rpx;height:100%;backgound:#e5e5e5"></view>
+            </navigator>
+          </view>
+
+          <view class="userInterest-card">
+            <navigator url="">
+              <view class="userInterest-img userInterest-zhuangs" style="">
+                <!--  <image src="../../images/zhuangs.png"> -->
+              </view>
+              <view class="userInterest-text">全部会员权益</view>
+            </navigator>
+          </view>
+      </view>
+    </view>
+    <!--用户权益 end-->
+
+    <!--我的订单  begin-->
+    <view class="myOrder">
+      <block wx:if="{{userinfo == ''||userinfo.nickname==''}}">
+        <view style=''>
+        <button type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即登录</button>
+        </view>
+        
+      </block>
+      <block wx:else>
+        <navigator url='/pages/firm/firmlist?curtab=all'>
+          <view class="myOrder-tit">
+            <view style="flex:1.5;margin-left:32rpx">我的订单</view>
+            <view style="flex:1;text-align:right;color:#7c7c7c;margin-right:22rpx">查看全部订单　<span class="ui-icon icon-arrow-right"></span></view>
+          </view>
+        </navigator>
+
+        <view class="myOrder-container">
+          <!-- 4个图标 -->
+          <view class="firm-box">
+            <view  class="firm-item">
+              <navigator url='/pages/firm/firmlist?curtab=dfk'>
+                <icon class="iconfont icon-qianbao-copy" style="font-size:54rpx;color:#dc9f45;"></icon>
+                <view class="qipaonum" hidden="{{status_count_dfk == 0 ? true : false}}">{{status_count_dfk}}</view>
+                <view class="firm-name">待付款</view>
+              </navigator>
+            </view>
+            <view  class="firm-item">
+              <navigator url='/pages/firm/firmlist?curtab=dfh'>
+                <icon class="iconfont icon-daifahuo" style="font-size:54rpx;color:#dc9f45;"></icon>
+                <view class="qipaonum" hidden="{{status_count_dfh == 0 ? true : false}}">{{status_count_dfh}}</view>
+                <view class="firm-name">待发货</view>
+              </navigator>
+            </view>
+            <view  class="firm-item">
+              <navigator url='/pages/firm/firmlist?curtab=dsh'>
+                <icon class="iconfont icon-kuaidi-copy" style="font-size:54rpx;color:#dc9f45;"></icon>
+                <view class="qipaonum" hidden="{{status_count_dsh == 0 ? true : false}}">{{status_count_dsh}}</view>
+                <view class="firm-name">待收货</view>
+              </navigator>
+            </view>
+            <view  class="firm-item">
+              <navigator url='/pages/waitcomment/waitcommentgoods?curtab=0'>
+                <icon class="iconfont icon-daipingjia" style="font-size:54rpx;color:#dc9f45;"></icon>
+                <view class="qipaonum" hidden="{{status_count_dpj == 0 ? true : false}}">{{status_count_dpj}}</view>
+                <view class="firm-name">待评价</view>
+              </navigator>
+            </view>
+            <view  class="firm-item">
+              <view>
+                <icon class="iconfont icon-tuikuanshouhou" style="font-size:54rpx;color:#dc9f45;"></icon>
+                <view class="qipaonum" hidden="{{status_count_tk == 0 ? true : false}}">{{status_count_tk}}</view>
+                <view class="firm-name">退换/售后</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <!--我的订单 end-->
+
+    <!--会员专区  begin-->
+    <view class="memberArea">
+      <view class="userInterest-card">
+        <navigator url='/pages/product/list?type=1'>
+          <view class="userInterest-num">{{num.mark}}</view>
+          <view class="userInterest-text">商品收藏</view>
+        </navigator>
+      </view>
+      <view class="userInterest-card">
+        <navigator url='/pages/product/list?type=2'>
+          <view class="userInterest-num">{{num.watched}}</view>
+          <view class="userInterest-text">我的足迹</view>
+        </navigator>
+      </view>
+      <view class="userInterest-card">
+        <navigator url='/pages/quan/list?type=all'>
+          <view class="userInterest-num">{{num.all_quan}}</view>
+          <view class="userInterest-text">领取优惠券</view>
+        </navigator>
+      </view>
+      <view class="userInterest-card userInterest-card-leftborder">
+        <navigator url='/pages/quan/list?type=mine'>
+          <view class="userInterest-num">{{num.my_quan}}</view>
+          <view class="userInterest-text">我的优惠券</view>
+        </navigator>
+      </view>
+      <view class="userInterest-card">
+        <navigator url="">
+          <view class="userInterest-img userInterest-vip" style="height:90rpx">
+            <!-- <image src="../../images/zhuanxiang.png"> -->
+          </view>
+          <view class="userInterest-text">会员专享</view>
+          <view style="width:2rpx;height:100%;backgound:#e5e5e5"></view>
+        </navigator>
+      </view>
+
+    </view>
+    <!--会员专区 end-->
+
+    <!--为您推荐  begin-->
+    <view class="Recommend">
+      <view style='font-size:27rpx'>
+        <ui-divider padding="20" _pid="{{_pid}}">为您推荐</ui-divider>
+      </view>
+      <navigator class="recommendImg" wx:for="{{recommend}}" url="/pages/details/details?pro_id={{item.mapping_id}}">
+        <image src="{{item.picsrc}}" mode="widthFix" style='width:100%'/>
+      </navigator>
+      <view style="height:30rpx;width:100%"></view>
+    </view>
+    <!--为您推荐 end-->
+  </view>
+
+</view>

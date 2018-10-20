@@ -1,0 +1,24 @@
+<view class='num-area'>
+  <view class='num-area-item'>
+    <view class='num-area-item-left'>当前余额</view>
+    <view class='num-area-item-right'>￥{{userinfo.account_balance}}</view>
+  </view>
+  <view class='num-area-item'>
+    <view class='num-area-item-left'>充值金额</view>
+    <view class='num-area-item-right'>
+      <input class='num-input' type='number' bindinput='save_num'></input>
+    </view>
+  </view>
+</view>
+<block wx:if="{{userinfo.level_id>1}}">
+  <block wx:if="{{num >= 1}}">
+      <view class='zhifu-btn' bindtap='pay_charge'>
+      微信支付
+      </view>
+  </block>
+  <block wx:else>
+      <view class='zhifu-btn' style='background-color:grey'>
+      微信支付
+      </view>
+  </block>
+</block>

@@ -1,0 +1,26 @@
+<view class='foot-add' bindtap='add_fapiao'>
+ + 添加发票抬头
+</view>
+
+<view class='fapiao-box'>
+<block wx:for="{{list}}" wx:key="{{index}}">
+  <radio-group bindchange='set_default'>
+    <view class='fapiao-item'>
+      <view class='line1'>
+        <view class='fapiao-title'>
+        名称：{{item.title}}
+        </view>
+        <view class='fapiao-taxnum' wx:if="{{item.type == 0}}">
+        税号：{{item.taxNumber}}
+        </view>
+      </view>
+      <view class='line2'>        
+        <view class='line2-left' bindtap='selects' data-id="{{item.id}}"><radio color='#f55' style='transform:scale(0.7);' checked="{{item.is_default == 1 ? true : false}}"></radio>设为默认</view>
+        <view class='line2-right' bindtap='del_fapiao' data-id="{{item.id}}">
+          <icon class='iconfont icon-shanchu'>删除</icon>
+        </view>
+      </view>
+    </view>
+  </radio-group>
+</block>
+</view>

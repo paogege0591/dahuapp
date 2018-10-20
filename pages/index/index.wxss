@@ -1,0 +1,606 @@
+/* 1像素解决方案 */
+/*
+ * 清除1px
+ */
+/*
+ * 清除浮动
+ */
+/*
+ * mobile
+ */
+/*
+ * 1px
+ */
+/*
+ * text
+ */
+/* 垂直居中 */
+/* 水平居中 */
+/* 水平垂直居中 */
+/* 超出部分出省略号 */
+/* 多行文本超出部分省略号 */
+page {
+  background: #fff;
+  height: 100%;
+  overflow-x: hidden;
+}
+scroll-view {
+  height: 100%;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header {
+  display: -webkit-flex;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  z-index: 1;
+  height: 95rpx;
+  -webkit-transition: background 0.5s ease-in-out;
+}
+.header.scrolled {
+  background: #06c1ae;
+}
+.header .location {
+  color: #000;
+  font-size: 30rpx;
+  line-height: 34rpx;
+  min-width: 100rpx;
+  max-width: 340rpx;
+  padding: 10rpx 20rpx 10rpx 10rpx;
+  border-radius: 30rpx;
+  vertical-align: middle;
+}
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.header .icon {
+  width: 35rpx;
+  height: 35rpx;
+  vertical-align: top;
+  margin: 0rpx 0;
+}
+.header .search {
+  -webkit-flex: 1;
+  color: #888;
+  font-size: 30rpx;
+  line-height: 34rpx;
+  padding: 10rpx;
+  background: #efefef;
+  /*border-bottom: 1rpx solid #aaa;*/
+}
+.starContent {
+  padding: 100rpx 100rpx 0rpx 100rpx;
+}
+.buttonContent {
+  padding: 100rpx;
+}
+.icons {
+  height: 450rpx;
+  padding: 20rpx 10rpx;
+  padding-bottom: 0;
+  background: #fff;
+  border-radius: 20rpx;
+}
+.icons swiper-item {
+  width: 100%;
+}
+.icon {
+  float: left;
+  display: -webkit-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 33.3333%;
+  text-align: justify;
+  margin: 10rpx 0;
+  padding: -3rpx;
+  overflow: hidden;
+}
+.icon image {
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;
+}
+.icon text {
+  color: #323232;
+  font-size: 24rpx;
+  line-height: 1.5;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.ui-tab {
+  color: #626262;
+  font-size: 14px;
+}
+.list {
+  width: 100%;
+  column-count: 2;
+  column-gap: 10rpx;
+  margin: 0 auto;
+}
+.card {
+  display: inline-block;
+  width: 98%;
+  height: 100%;
+  overflow: auto;
+  margin-bottom: 8rpx;
+}
+.aboutDahu {
+  box-shadow: 0px 5rpx 10rpx #d3d3d3;
+  height: 100%;
+  width: 100%;
+  border-radius: 20rpx;
+  background: #fff;
+}
+.moreText {
+  color: #313131;
+  position: relative;
+  font-size: 28rpx;
+  font-weight: 500;
+  margin-top: -64rpx;
+  text-align: right;
+  padding: 0px 20rpx;
+  line-height: 60rpx;
+}
+.couponTit {
+  font-size: 38rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #4a4a4a;
+  letter-spacing: 4rpx;
+}
+.promotionTitEn {
+  font-size: 30rpx;
+  color: #7a7a7a;
+  text-align: center;
+}
+.promotionTitCh {
+  font-size: 34rpx;
+  color: #7a7a7a;
+  line-height: 50rpx;
+  border: 2rpx solid #000;
+  text-align: center;
+  width: 200rpx;
+  margin: 20rpx auto;
+}
+.promotionView {
+  box-shadow: 0px 2rpx 10px #d3d3d3;
+  height: 100%;
+  width: 100%;
+  border-radius: 20rpx;
+}
+.promotion {
+  margin-bottom: 40rpx;
+}
+.PointsShoppingTitCh {
+  font-size: 34rpx;
+  color: #7a7a7a;
+  line-height: 50rpx;
+  border: 2rpx solid #000;
+  text-align: center;
+  width: 300rpx;
+  margin: 20rpx auto;
+}
+.PointsShopping {
+  margin-bottom: 60rpx;
+}
+.lineTab {
+  border-bottom: 6rpx solid #ff4949;
+  width: 60%;
+  font-size: 32rpx;
+  color: #ff4949;
+}
+.dahuText {
+  width: 50%;
+  float: right;
+  text-align: justify;
+  font-size: 24rpx;
+  padding: 0px 16rpx;
+}
+view.search {
+  display: flex;
+  flex-direction: row;
+  background: #efeff4;
+  align-items: center;
+  border-radius: 10rpx;
+  overflow: hidden;
+  border-radius: 50rpx;
+}
+view.searchItem {
+  display: flex;
+  width: 100%;
+  background: #fff;
+  flex-direction: row;
+  border-radius: 10rpx;
+}
+view.searchItem image {
+  height: 54rpx;
+  width: 50rpx;
+  align-self: center;
+  padding-left: 10rpx;
+  padding-right: 20rpx;
+  background: #efeff4;
+  margin-top: -1px;
+}
+view.searchItem input {
+  flex: 1;
+  font-size: 28rpx;
+  background: #efeff4;
+  border: 20rpx;
+  height: 60rpx;
+  line-height: 60px;
+  border-radius: 0rpx 20rpx 20rpx 0rpx;
+}
+.iconImg {
+  padding: 8rpx;
+}
+.iconImg text {
+  height: 76rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.broadcast .iconImg text {
+  height: 115rpx;
+  display: -webkit-box;
+  color: #000000;
+  line-height: 40rpx;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 导航菜单 */
+.navi-scroll{
+  height: 80rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 75rpx;
+  font-size: 32rpx;
+  white-space: nowrap;
+  z-index: 99;
+  margin-bottom:20rpx;
+}
+
+.navitab{ 
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+}
+
+.curtab{
+  color:#EF4F4F;
+  border-bottom:10rpx solid #EF4F4F;
+}
+/* 1像素解决方案 */
+/*
+ * 清除1px
+ */
+/*
+ * 清除浮动
+ */
+/*
+ * mobile
+ */
+/*
+ * 1px
+ */
+/*
+ * text
+ */
+/* 垂直居中 */
+/* 水平居中 */
+/* 水平垂直居中 */
+/* 超出部分出省略号 */
+/* 多行文本超出部分省略号 */
+view {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+page {
+  background-color: #fff;
+  height: 100%;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.touchui-hover {
+  background-color: #eee !important;
+}
+button {
+  font-size: 28rpx;
+  overflow: inherit;
+  color: #1f2d3d;
+  margin: 12rpx 0;
+}
+button[type="primary"] {
+  background-color: #39f;
+}
+button[type="primary"][loading] {
+  background-color: #39f;
+}
+button[type="primary"].button-hover {
+  color: #fff;
+  background-color: #0070e0;
+  opacity: 0.8;
+}
+button[type="primary"][plain] {
+  border-color: #39f;
+  color: #39f;
+}
+button[type="primary"][plain].button-hover {
+  color: #39f;
+  border-color: #39f;
+  opacity: 0.8;
+}
+button[type="primary"][size="mini"].button-hover {
+  border-color: #39f !important;
+}
+button[type="primary"][disabled] {
+  background-color: #85c2ff;
+}
+button[type="primary"][size="mini"] {
+  border-color: #39f !important;
+}
+button[type="primary"][size="mini"].button-hover {
+  border-color: #39f !important;
+}
+button[type="success"] {
+  background-color: #13ce66;
+}
+button[type="success"].button-hover {
+  color: #fff;
+  background-color: #10a954;
+  opacity: 0.8;
+}
+button[type="success"][plain] {
+  border-color: #13ce66;
+  color: #13ce66;
+}
+.ui-row-list {
+  position: relative;
+}
+.ui-row-list.ui-row-list-bordered:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 2rpx;
+  border-top: 2rpx solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+.ui-row-list.ui-row-list-bordered:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 2rpx;
+  border-bottom: 2rpx solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+.ui-row-list > .ui-row:not(:last-child):after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1rpx;
+  border-bottom: 1rpx solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+.ui-row-list.ui-row-list-border-left-indent {
+  padding-left: 30rpx;
+}
+.ui-row-list.ui-row-list-border-indent {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+.ui-row {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.ui-row-border-top:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1rpx;
+  border-top: 1rpx solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+.ui-row-border-bottom:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1rpx;
+  border-bottom: 1rpx solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 0 100%;
+  transform: scaleY(0.5);
+}
+.ui-row-img img,
+.ui-row-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ui-col {
+  position: relative;
+  min-width: 0;
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+.ui-col.valign-top {
+  align-items: flex-start;
+}
+.ui-col.valign-bottom {
+  align-items: flex-end;
+}
+.ui-col.valign-middle {
+  align-items: center;
+}
+.ui-col.align-left {
+  justify-content: flex-start;
+}
+.ui-col.align-center {
+  justify-content: center;
+}
+.ui-col.align-right {
+  justify-content: flex-end;
+}
+.ui-col-content {
+  height: 100%;
+  min-width: 0;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+.ui-col-content.flex-column {
+  flex-direction: column;
+}
+.ui-col-content.valign-top {
+  justify-content: flex-start;
+}
+.ui-col-content.valign-bottom {
+  justify-content: flex-end;
+}
+.ui-col-content.valign-middle {
+  justify-content: center;
+}
+.ui-col-content.align-left {
+  align-items: flex-start;
+}
+.ui-col-content.align-center {
+  align-items: center;
+}
+.ui-col-content.align-right {
+  align-items: flex-end;
+}
+.ui-col-border-left:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1rpx;
+  bottom: 0;
+  border-left: 1rpx solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 0 0;
+  transform: scaleX(0.5);
+}
+.ui-col-border-right:after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1rpx;
+  bottom: 0;
+  border-right: 1rpx solid #C7C7C7;
+  color: #C7C7C7;
+  transform-origin: 100% 0;
+  transform: scaleX(0.5);
+}
+.ui-col-align-center {
+  text-align: center;
+}
+.ui-col-align-right {
+  text-align: right;
+}
+.ui-col-12 {
+  float: left;
+  height: 100%;
+  width: 100%;
+}
+.ui-col-11 {
+  float: left;
+  height: 100%;
+  width: 91.66666667%;
+}
+.ui-col-10 {
+  float: left;
+  height: 100%;
+  width: 83.33333333%;
+}
+.ui-col-9 {
+  float: left;
+  height: 100%;
+  width: 75%;
+}
+.ui-col-8 {
+  float: left;
+  height: 100%;
+  width: 66.66666667%;
+}
+.ui-col-7 {
+  float: left;
+  height: 100%;
+  width: 58.33333333%;
+}
+.ui-col-6 {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+.ui-col-5 {
+  float: left;
+  height: 100%;
+  width: 41.66666667%;
+}
+.ui-col-4 {
+  float: left;
+  height: 100%;
+  width: 33.33333333%;
+}
+.ui-col-3 {
+  float: left;
+  height: 100%;
+  width: 25%;
+}
+.ui-col-2 {
+  float: left;
+  height: 100%;
+  width: 16.66666667%;
+}
+.ui-col-1 {
+  float: left;
+  height: 100%;
+  width: 8.33333333%;
+}

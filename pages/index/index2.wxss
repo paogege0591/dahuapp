@@ -1,0 +1,266 @@
+/* 定位区域 */
+.distance{
+  text-align: center;
+  font-size: 28rpx;
+  margin-bottom: 15rpx;
+}
+/* 导航菜单 */
+.navi-scroll{
+  height: 80rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 75rpx;
+  font-size: 32rpx;
+  white-space: nowrap;
+  z-index: 99;
+}
+
+.navitab{ 
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+}
+
+.curtab{
+  color:#EF4F4F;
+  border-bottom:10rpx solid #EF4F4F;
+}
+
+/* 轮播图 */
+.lunbo{
+   height:434rpx;
+}
+
+/* 搜索框 */
+.search-box{
+   border:16rpx solid #e5e5e5;
+}
+
+.search-icon{  
+   font-size:54rpx;
+   color:#999;
+}
+
+.search-font{
+  background-color:#fff;
+  width:80%;
+  display:inline-block;
+}
+
+.holder{
+  margin-left:20rpx;
+  color:#999;
+  font-size:32rpx;
+}
+
+/* 热点 */
+.hot-icon{
+  color:#FF6464;
+  margin-right:15rpx;
+}
+
+.hot-news{
+  display:inline;
+  font-size:32rpx;
+  color:#828282;
+}
+
+.circle-area{
+  width:100rpx;
+  height:100rpx;
+  padding:43.75rpx;
+  font-size:25rpx;
+  float:left;
+}
+
+.circle-icon{
+  width:  100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.mid{
+  font-size:70rpx;
+  line-height:100rpx;
+  color:#FFFFFF;
+  margin-left:16rpx; 
+}
+
+.circle-font{
+  text-align: center;
+  width: 100rpx; 
+}
+
+/* 秒杀 */
+.miaosha-1{
+  border-top-left-radius: 15rpx 15rpx;
+  border-bottom-left-radius: 15rpx 15rpx;
+  background-color: #FA444E;
+  font-size: 32rpx;
+  color:#FFF;
+  display:inline;
+  margin-left:30rpx;
+  border: #FA444E solid 5rpx;
+}
+
+.miaosha-2{
+  border-top-right-radius: 15rpx 15rpx;
+  border-bottom-right-radius: 15rpx 15rpx;
+  background-color: #FFF;
+  font-size: 32rpx;
+  color:#FA444E;
+  display:inline;
+  border: #FA444E solid 5rpx;
+  padding-right:10rpx;
+}
+
+.miaosha-item{
+  width:125rpx;
+  float:left;
+}
+
+.miaosha-pic{
+  width:95rpx;
+  height:95rpx;
+  margin: 15rpx;
+}
+
+.miaosha-shoujia{
+  text-align: center;
+  font-size:30rpx;
+}
+
+.miaosha-yuanjia{
+  text-align: center;
+  font-size: 24rpx;
+  color:#5e5e5e;
+  text-decoration:line-through;
+}
+
+/* 优惠券 */
+.quan{
+  display: flex;
+  flex-direction: row;
+  padding: 0 15rpx;
+}
+.quan-item{
+  width: 210rpx;
+  margin: 15rpx;
+  height: 100rpx;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+.quan-item:after {
+  position: absolute;
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  background: #fff;
+  top: 30rpx;
+  right: -20rpx;
+  border-radius: 100%;
+}
+.quan-item:before {
+  position: absolute;
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  background: #fff;
+  top: 30rpx;
+  left: -20rpx;
+  border-radius: 100%;
+}
+.quan-money{
+  line-height: 50rpx;
+  height: 50rpx;
+  font-size: 32rpx;
+}
+.get-btn{
+  font-size: 28rpx;
+  width: 120rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  margin: auto;
+  border-radius: 32rpx;
+  border: 1rpx solid #fff;
+}
+
+/* 视频 */
+.indexvideo{
+  width:100%;
+}
+
+/* 推荐热卖商品 */
+.rm-title{
+  color:#FFF;
+  text-align: center;
+  font-size:36rpx;
+  line-height: 80rpx;
+}
+.rm-pic4{
+  width:340rpx;
+  float:left;
+  margin: 10rpx 17.5rpx;
+  background-color: #FFF;
+  font-size: 25rpx;
+}
+.rm-pic4-pic{
+  width: 340rpx;
+  height:268rpx;
+}
+.rm-pic4-content{
+  line-height: 40rpx;
+}
+.rm-pic4-shoujia{
+  font-weight: bolder;
+  color:#F1201A;
+  display: inline;
+}
+.rm-pic4-yuanjia{
+  font-size: 18rpx;
+  color:#646464;
+  text-decoration:line-through #F1201A;
+  display: inline;
+  margin-left:10rpx;
+}
+.rm-pic4-xiaoliang{
+  font-size: 18rpx;
+  color:#747474;
+  display: inline;
+  margin-left:10rpx;
+}
+.rm-pic4-cart{
+  margin-left:15rpx;
+  display: inline;
+  color: #133d80;
+}
+.cart{
+  font-size: 40rpx;
+  line-height: 40rpx;
+}
+.rm-foot{
+  width: 350rpx;
+  display:inline-block;
+  font-size:32rpx;
+  color:#6d6d6d;
+  text-align: center;
+}
+.vipbox{
+  margin-left: 30rpx;
+  display: inline-block;
+  color:#999;
+}
+.recharge{
+  font-size: 32rpx;
+  margin-left: 25rpx;
+  color:#000;
+  display: inline-block;
+}
+
+.chakan{
+  font-size: 28rpx;
+  margin-right: 25rpx;
+  color:#888;
+  float: right;
+}

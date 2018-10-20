@@ -1,0 +1,33 @@
+<!-- 搜索地址 -->
+<!-- <view class='search-location'>
+  <view class="search-box">
+    <icon class="iconfont icon-sousuo search-icon"></icon>
+    <input placeholder-class="holder" placeholder="请输入您的地址" class="search-font"/>
+  </view>
+  <icon class='iconfont icon-liebiao liebiao-icon liebiao-icon'></icon>
+</view> -->
+
+<!-- 列表 -->
+<view class='list-area' wx:if="{{list}}">
+  <block wx:for="{{list}}">
+    <view class='list-item'>
+      <navigator class='line1' url='/pages/mendian/detail?store_id={{item.id}}'>
+        <view class='line1-name'>{{item.name}}</view>
+        <view class='line1-dis'>{{item.distance}}</view>
+      </navigator>
+      <navigator class='line2' url='/pages/mendian/detail?store_id={{item.id}}'>
+        <view class='line2-loc'>{{item.location}}</view>
+        <view class='line2-tel'>{{item.telnum}}</view>
+      </navigator>
+      <view class='line3'>
+        <icon class='iconfont icon-location line3-icon' bindtap='map' data-id="{{item.id}}">地图</icon>
+        <icon class='iconfont icon-weibiaoti- line3-icon' bindtap='call' data-telnum="{{item.telnum}}">致电</icon>
+        <icon class='iconfont icon-wxbmingxingdianpu line3-icon' bindtap='map' data-id="{{item.id}}">门店</icon>
+        <icon class='iconfont icon-daohang line3-icon' bindtap='daohang' data-location="{{item.location}}" data-latitude="{{item.latitude}}" data-longitude="{{item.longitude}}">一键导航</icon>
+      </view>
+    </view>
+  </block>
+</view>
+<view wx:else="{{list}}">
+<button open-type='openSetting' bindopensetting='onLoad'>点击授权获取位置</button>
+</view>

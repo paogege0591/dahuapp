@@ -1,0 +1,45 @@
+.wl-page{
+  background-color: #f7f7f7;
+  font-size: 28rpx;
+  color: #999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 25rpx;
+  overflow-y: scroll;
+  margin-bottom: 80rpx;
+}
+.wl-btn{
+  background-color: #f55;
+  line-height: 80rpx;
+  height: 80rpx;
+  color: #FFF;
+  text-align: center;
+  font-size: 34rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+.wl-item{
+  padding: 20rpx 0;
+  display: flex;
+  flex-direction: row;
+}
+.wl-time{
+  width: 180rpx;
+}
+.wl-detail{
+  margin-left: 20rpx;
+  width: 500rpx;
+}
+.wl-first{
+  font-size: 30rpx;
+  color: #000;
+  font-weight: bold;
+}
+

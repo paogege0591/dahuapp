@@ -1,0 +1,56 @@
+
+<view class='clear'></view>
+
+<view class='cart-area'>
+  <block wx:for="{{cart_detail}}">
+    <view class='pro-item'>
+      <view class='checkradio'>
+        <view wx:if="{{item.is_failure}}" class='is_failure'>已下架</view>
+        <radio wx:else color='#f55' data-index="{{index}}" checked='{{item.checked}}' bindtap='changeradio'></radio>
+      </view>
+      <view class='pro-img'>
+        <image src="{{item.img_path}}" class='full-pic'></image>
+      </view>
+      <navigator class='pro-detail' url="/pages/details/details?pro_id={{item.goods_id}}">
+        <view class='pro-name'>
+          {{item.goods_name}}
+        </view>
+        <view class='pro-guige'>
+          {{item.spec_key_name}}
+        </view>
+        <view class="pro-price1" wx:if="{{!item.is_failure}}">
+          <view class='pro-price2'>
+          ￥{{item.goods_price-item.member_goods_price}}
+          </view>
+          <view class='pro-price3'>
+          数量:{{item.goods_num}}
+          </view>
+        </view>
+      </navigator>
+      <view class='pro-num'>
+        <view class='discount' wx:if="{{!item.is_failure}}">会员折扣:￥{{item.member_goods_price}}</view>
+        <view class='dismoney' wx:if="{{!item.is_failure}}">产品原价:￥{{item.goods_price}}</view>
+        <view class='delbtn' data-cartid="{{item.id}}" bindtap='delcart'>删除</view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class='foot-area'>
+    <view class='allradio'>
+      <radio color='#f55' checked='{{allchecked}}' bindtap='changeall'></radio>
+    </view>
+    <view class='footall'>全选</view>
+    <view class='footcount'>
+      <view class='foot-money'>
+        合计:
+        <view class='money'>{{totalmoney}}元</view>
+      </view>
+      <view class='footyunfei'>
+        不含运费
+      </view>
+    </view>
+    <view class='footbuy' bindtap='gotopay'>
+    结算
+    </view>
+</view>

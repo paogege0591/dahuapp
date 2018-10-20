@@ -1,0 +1,59 @@
+page {
+  background-color: #fefefe;
+  font-size: 30rpx;
+}
+.num-area {
+  margin: 20rpx 0 40rpx 0;
+  padding: 0 20rpx;
+  background-color: #fff;
+  color: #666;
+  line-height: 90rpx;
+}
+.num-area-item {
+  border-bottom: 1rpx solid #f7f7f7;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+}
+.num-area-item-left {
+  float: left;
+  width: 150rpx;
+}
+.zhifu-btn {
+  height: 80rpx;
+  text-align: center;
+  margin: 0 10rpx;
+  background-color: #f55;
+  color: #fff;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+}
+.num-input {
+  position: relative;
+  top: 21rpx;
+}
+.yzm {
+  float: right;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: auto;
+  text-align: center;
+}
+.hqyzm {
+  width: 180rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #f55;
+  background-color: #f55;
+  color: #FFF;
+}
+.djs {
+  width: 180rpx;
+  border-radius: 40rpx;
+  border: 1rpx solid #ccc;
+  background-color: #ccc;
+  color: #FFF;
+}
+
+.item-right{
+  width: 70%;
+}

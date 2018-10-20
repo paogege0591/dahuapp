@@ -1,0 +1,55 @@
+/* pages/user/checkmobile.wxss */
+page{
+  background-color: #f7f7f7;
+  font-size: 30rpx;
+}
+.form-area{
+  margin: 20rpx 0 40rpx 0;
+  padding: 0 20rpx;
+  background-color: #fff;
+  color: #666;
+  line-height: 90rpx;
+}
+.form-item{
+  border-bottom: 1rpx solid #f7f7f7;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+}
+.form-title{
+  width: 150rpx;
+}
+.form-input{
+  position: relative;
+  top:18rpx;
+}
+.yzm{
+  float: right;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin: auto;
+  text-align: center;
+}
+.hqyzm{
+  width: 180rpx;
+  border-radius: 40rpx;
+  border: 1rpx solid #f55;
+  background-color: #f55;
+  color: #FFF;
+}
+.djs{
+  width: 180rpx;
+  border-radius: 40rpx;
+  border: 1rpx solid #ccc;
+  background-color: #ccc;
+  color: #FFF;
+}
+.bind-btn{
+  height: 80rpx;
+  text-align: center;
+  margin: 0 10rpx;
+  background-color: #f55;
+  color: #fff;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+}

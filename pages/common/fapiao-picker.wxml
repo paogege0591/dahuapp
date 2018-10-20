@@ -1,0 +1,27 @@
+<view class='fapiao-area' wx:if="{{fapiao_picker}}">
+  <view class='fapiaofoot-add' bindtap='setfapiaodefault'>
+  不开发票
+  </view>
+  <navigator url='/pages/fapiao/fapiao' class='fapiao-set'>
+    管理发票抬头
+  </navigator>
+  <view class='fapiao-box'>
+  <block wx:for="{{fapiao_list}}">
+    <radio-group bindchange='set_default'>
+      <view class='fapiao-item'>
+        <view class='fapiaoline1'>
+          <view class='fapiao-title'>
+          名称：{{item.title}}
+          </view>
+          <view class='fapiao-taxnum'>
+          税号：{{item.taxNumber}}
+          </view>
+        </view>
+        <view class='fapiaoline2' data-index="{{index}}" bindtap='setfapiao'>       
+            选择
+        </view>
+      </view>
+    </radio-group>
+    </block>
+  </view>
+</view>

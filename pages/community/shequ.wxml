@@ -1,0 +1,83 @@
+<view style="width:100%;overflow-x:hidden;">
+  <view class="shequDetails">
+    <!--用户信息  begin-->
+    <view class="userInfo">
+      <view class="hpImg">
+        <image src="{{info.user.avatar}}" />
+      </view>
+      <view class="info">
+        <view class="name">{{info.user.nickname}}</view>
+        <view class="timeAddress">{{info.time_diff}} | {{info.address}}</view>
+      </view>
+      <view class="clear"></view>
+    </view>
+    <!--用户信息      end-->
+
+    <!--文章详情   begin-->
+    <view class="articleDetails">
+      <view class="article-img" wx:if="{{info.photo.length>0}}">
+        <block wx:for="{{info.photo}}" wx:for-item="vo">
+          <view class='half-pic' bindtap="showImage" data-url="{{vo.url}}">
+            <image src="{{vo.url}}" mode="aspectFit" class='full-pic' />
+          </view>
+        </block>
+      </view>
+      <view class="articleText">
+        {{info.content}}
+      </view>
+      <view class="caozuo">
+        <span  bindtap='dianzan' data-aid="{{item.id}}" >
+          <i class="iconfont {{info.already_dianzan ? 'icon-dianzan-choose' : 'icon-dianzan'}}" style="font-size:32rpx;margin: 0rpx 12rpx;"></i>{{info.nums.d_num}}赞　　</span>
+        <span bindtap="article_pinglun" bindtap="article_pinglun">
+          <i class="iconfont icon-daipingjia-copy" style="font-size:28rpx;margin: 0rpx 12rpx;"></i>{{info.nums.r_num}}评论
+        </span>
+      </view>
+
+      <view class="text_area_box {{comment_text ? 'show' : 'hide'}}">
+        <textarea placeholder="{{text}}" class='text_area' bindinput="currentInput" value="{{comment_textarea_value}}" />
+        <button class='send' bindtap='sendClick'>发送</button>
+        <view style='clear:both'></view>
+      </view>
+
+    </view>
+    <!--文章详情   end-->
+
+    <!--评论    begin-->
+    <h1 style="width:100%;font-size:28rpx;font-weight:600;color:600">评论</h1>
+    <view class="nullPinglun {{info.reply.length == 0 ? 'show' : 'hide'}}">
+      ~暂无评论~
+    </view>
+    <view class="comment_total_box" style="width:100%;height:{{commentHeight}}px;overflow:hidden;transition: 1s;">
+      <!--父评论      begin-->
+      <view class="comment" wx:for="{{info.reply}}" id="mjltest"  wx:for-index="ind">
+      <block wx:if="{{ind<2||isOpen}}">
+        <view class="commentView">
+          <view class="commentFlex">
+            <view style="text-align:left">
+              {{item.nickname}}
+            </view>
+            <view style="text-align:right">
+              <span style="font-size:22rpx;color:#999999" bindtap="pinglun_dianzan" data-rid="{{item.id}}" data-already="{{item.already_dianzan}}">
+                <i class="iconfont {{item.already_dianzan ? 'icon-dianzan-choose' : 'icon-dianzan'}}" style="font-size:28rpx;margin: 0rpx 12rpx;"></i>{{item.dianzan.count}}
+              </span>
+            </view>
+          </view>
+          <view class="commentLiuyan">
+            {{item.content}}
+          </view>
+          <view class="commentText">{{item.createtime}}</view>
+        </view>
+        <!-----commentView----->
+        </block>
+      </view>
+      <!--comment-->
+      <!--父评论              end-->
+    </view>
+    <view class="lookAll {{info.reply.length == 0 ? 'hide' : 'show'}}" bindtap="slide">
+      {{textAll}}（{{info.reply.length}}）
+    </view>
+    <!--评论    end-->
+  </view>
+
+
+</view>

@@ -1,0 +1,64 @@
+.area1{
+  background-color: #ff6c00;
+  color: #fff;
+  text-align: center;
+  height: 300rpx;
+  position: relative;
+}
+.area1-up{
+  border-bottom: 1rpx dashed #fff;
+  height: 100rpx;
+}
+.quan-type{
+  font-size: 24rpx;
+  font-weight: bold;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.quan-endtime{
+  font-size: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.quan-money{
+  font-size: 36rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.button{
+  width: 360rpx;
+  font-size: 24rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: auto;
+  color: #ff6c00;
+  background-color: #fff;
+  border: 8rpx solid #794300;
+  border-radius: 60rpx;
+}
+.area2{
+  margin: 40rpx;
+  border: 2rpx solid #999;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+}
+.area2-line1{
+  padding: 20rpx;
+  line-height: 40rpx;
+  height: 160rpx;
+  border-bottom: 1rpx dashed #999;
+}
+.area2-line2{
+  padding: 20rpx;
+  line-height: 40rpx;
+  height: 80rpx;
+  border-bottom: 1rpx dashed #999;
+}
+.area2-line3{
+  padding: 20rpx;
+  line-height: 40rpx;
+  height: 80rpx;
+}
+.font-bold{
+  font-weight: bold;
+}

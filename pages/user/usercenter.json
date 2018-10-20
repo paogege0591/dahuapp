@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "ui-divider": "../../packages/touchui-wx-components/ui-divider/dist/index"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#114b70",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "会员中心"
+}

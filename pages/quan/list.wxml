@@ -1,0 +1,16 @@
+<view class='quan-list'>
+  <view class='quan-item' wx:for="{{list}}" wx:key="index">
+    <view class='quan-left dahu-bg-orange'>
+      <view class='money'>{{item.money}}</view>
+      <view class='condition'>{{item.name}}</view>
+    </view>
+    <view class='quan-mid'>
+      <view class='quan-type'>购物抵用券</view>
+      <view class='quan-shengyu'>剩余{{item.remain_num}}张</view>
+      <view class='quan-endtime'>有效期至：{{item.use_end_time}}</view>
+    </view>
+    <view class='quan-right'>
+      <navigator class='firmbtn' url='/pages/quan/detail?id={{item.id}}'>立即领取</navigator>
+    </view>
+  </view>
+</view>

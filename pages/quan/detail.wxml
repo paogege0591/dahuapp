@@ -1,0 +1,31 @@
+<view class='area1'>
+  <view class='area1-up'>
+    <view class='quan-type'>购物抵用券</view>
+    <view class='quan-endtime'>有效期：{{detail.use_end_time}}</view>
+  </view>
+  <view class='area1-bottom'>
+    <view class='quan-money'>购物满{{detail.condition}}减{{detail.money}}元</view>
+    <view class='button' bindtap='get_quan' data-coupon-id="{{detail.id}}">立即领取</view>
+  </view>
+</view>
+
+<view class='area2'>
+    <view class='area2-line1' wx:if="{{detail.use_restrict}}">
+        <view class='font-bold'>使用限制</view>
+        <view class='dahu-gray3 font20'>指定商品   ( {{detail.use_restrict}} )   可用</view>
+    </view>
+    <view class='area2-line3'>
+        <view class='font-bold'>剩余</view>
+        <view class='dahu-gray3 font20'>{{detail.remain_num}}张</view>
+    </view>
+  <!-- <view class='area2-line1'>
+    <view class='font-bold'>领取限制</view>
+    <view class='dahu-gray3 font20'>无</view>
+    <view class='font-bold'>有效期限</view>
+    <view class='dahu-gray3 font20'>永久有效</view>
+  </view>
+  <view class='area2-line2'>
+    <view class='font-bold'>使用说明</view>
+    <view class='dahu-gray3 font20'>无</view>
+  </view> -->
+</view>

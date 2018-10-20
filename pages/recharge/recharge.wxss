@@ -1,0 +1,33 @@
+page{
+  background-color: #f7f7f7;
+  font-size: 30rpx;
+}
+.num-area{
+  margin: 20rpx 0 40rpx 0;
+  padding: 0 20rpx;
+  background-color: #fff;
+  color: #666;
+  line-height: 90rpx;
+}
+.num-area-item{
+  border-bottom: 1rpx solid #f7f7f7;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+}
+.num-area-item-left{
+  width: 150rpx;
+}
+.zhifu-btn{
+  height: 80rpx;
+  text-align: center;
+  margin: 0 10rpx;
+  background-color: #f55;
+  color: #fff;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+}
+.num-input{
+  position: relative;
+  top:18rpx;
+}

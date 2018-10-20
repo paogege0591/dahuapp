@@ -1,0 +1,51 @@
+<!--pages/scoreproduct/details.wxml-->
+<import src="/wxParse/wxParse.wxml"/>
+<swiper autoplay circular indicator-dots interval="5000" duration="500" class="lunbo">
+    <block wx:if="{{detail.goods_video}}">
+    <swiper-item>
+      <video class="full-pic" src="{{detail.goods_video}}" controls="true" autoplay="true"></video>
+    </swiper-item>
+    </block>
+  <block wx:for="{{detail.lunbo}}">
+    <swiper-item>
+      <image src="{{item.picsrc}}" class="full-pic" mode="aspectFit"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='view1 border-bt20'>
+  <view class='pro_name'>{{detail.pro_name}}</view>
+  <view class='fenxiang'>
+    <icon class='iconfont icon-fenxiang' style='font-size:36rpx;color:#ff5555;'></icon>
+    分享
+  </view>
+  <view class='price dahu-red'>{{per_score}}积分</view>
+  <view class='sellnum'>
+    <view style='display:inline;'>快递:包邮</view>
+  </view>
+</view>
+
+<view class='view3 border-bt20'>
+  <view style='font-size:30rpx;' bindtap='showguige'>
+    <view style='display:inline;'>已选: <block wx:for="{{option_name}}">{{item}} </block>  数量:{{num}}</view>
+    <view style='float:right;color:#b8b8b8'>></view>
+  </view>
+</view>
+
+<view class='view4'>
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+
+<view class='view-foot'>
+    <view wx:if="{{user_score >= score}}" class='foot-right' bindtap='exchange' style='width:100%;'>
+    兑换
+    </view>
+    <view wx:else class='foot-right' style='width:100%;background:grey;color:#fff'>
+    积分不足
+    </view>
+</view>
+
+<navigator url='/pages/index/index' class='back' open-type='switchTab'>首页</navigator>
+<include src='/pages/scoreproduct/goods-picker.wxml'></include>
+
+

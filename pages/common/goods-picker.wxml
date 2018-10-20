@@ -1,0 +1,43 @@
+
+<view class="{{goods_picker?'':'disNone'}}">
+    <view class='lucent'></view>
+    <view class='guige-area'>
+      <view class='option-picker-inner'>
+        <view class='option-picker-cell'>
+          <view class='img'>
+            <image class='full-pic' src='{{detail.lunbo[0].picsrc}}'></image>
+          </view>
+          <view class='option-price dahu-red'>
+            ￥ {{price}}
+          </view>
+          <view class='option-name'>
+           已选: <block wx:for="{{option_name}}">{{item}} </block>  数量:{{num}}
+          </view>
+        </view>
+        <view class='option-picker-options'>
+          <block wx:for="{{detail.options}}" wx:for-item="vo">
+            <view data-type='{{vo.type_name}}' style='border-bottom:1rpx solid #eee;font-size:26rpx;'>
+            {{vo.type_name}}:
+              <block wx:for="{{vo.options}}">
+              <view data-type="{{vo.type_name}}" data-num="{{item.option_id}}" data-name="{{item.option_name}}" class="option-item {{curoption[vo.type_name]==item.option_id?'curoption':''}}" bindtap='changeoption'>
+              {{item.option_name}}
+              </view>
+              </block>
+            </view>
+          </block>
+          <view class='choosenum'>
+            <view class='num-left'>数量</view>
+            <view class='num-right'>
+              <view class="minus {{num==1?'disabled':''}}" bindtap='minus'>-</view>
+              <view class='num-item'>{{num}}</view>
+              <view class='plus' bindtap='plus'>+</view>
+            </view>
+          </view>
+        </view>
+        <view class='option-picker-btn' bindtap='hideguige'>
+          确定
+        </view>
+
+      </view>
+    </view>
+</view>

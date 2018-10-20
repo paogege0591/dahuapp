@@ -1,0 +1,18 @@
+<!-- 列表 -->
+<view class='mendianlist-area' wx:if="{{mendian_picker}}">
+  <block wx:for="{{mendian_list}}">
+    <view class='mendianlist-item'>
+      <view class='mendianline1'>
+        <view class='mendianline1-name'>{{item.name}}</view>
+        <view class='mendianline1-dis'>{{item.distance}}</view>
+        <view class='clear'></view>
+      </view>
+      <view class='mendianline2'>
+        <view class='mendianline2-loc'>{{item.location}}</view>
+        <view class='mendianline2-tel'>{{item.telnum}}
+          <view class='mendianchoosebtn' data-index="{{index}}" bindtap='setmendian'>选择</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

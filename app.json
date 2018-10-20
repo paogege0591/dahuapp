@@ -1,0 +1,91 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/index2",
+    "pages/user/integral",
+    "pages/user/yue",
+    "pages/user/set",
+    "pages/subpay/miaosha_subpay",
+    "pages/subpay/tuangou_subpay",
+    "pages/tuangou/goods_list",
+    "pages/tuangou/pay",
+    "pages/tuangou/details",
+    "pages/miaosha/list",
+    "pages/miaosha/pay",
+    "pages/miaosha/goods_list",
+    "pages/miaosha/details",
+    "pages/product/list",
+    "pages/details/details",
+    "pages/cart/cart",
+    "pages/quan/list",
+    "pages/quan/detail",
+    "pages/user/usercenter",
+    "pages/fapiao/fapiao",
+    "pages/addr/addr",
+    "pages/firm/firmlist",
+    "pages/community/community",
+    "pages/community/addarticle",
+    "pages/community/shequ",
+    "pages/tuwen/content",
+    "pages/tuwen/chuidiao",
+    "pages/tuwen/taiji",
+    "pages/mendian/list",
+    "pages/user/bindtel",
+    "pages/mendian/detail",
+    "pages/pay/pay",
+    "pages/categories/categories",
+    "pages/subpay/subpay",
+    "pages/recharge/recharge",
+    "pages/scoreproduct/list",
+    "pages/scoreproduct/details",
+    "pages/scoreproduct/exchange",
+    "pages/scoreproduct/submitpay",
+    "pages/pingjia/pingjia",
+    "pages/waitcomment/waitcommentgoods",
+    "pages/commentinfo/commentinfo",
+    "pages/user/infoset",
+    "pages/user/checkmobile",
+    "pages/user/setpaypwd"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999", 
+    "selectedColor": "#f55",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tabbar/icon-1.png",
+        "selectedIconPath": "static/tabbar/icon-1-active.png"
+      },
+      {
+        "pagePath": "pages/categories/categories",
+        "text": "全部分类",
+        "iconPath": "static/tabbar/icon-2.png",
+        "selectedIconPath": "static/tabbar/icon-2-active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "static/tabbar/icon-4.png",
+        "selectedIconPath": "static/tabbar/icon-4-active.png"
+      },
+      {
+        "pagePath": "pages/user/usercenter",
+        "text": "会员中心",
+        "iconPath": "static/tabbar/icon-5.png",
+        "selectedIconPath": "static/tabbar/icon-5-active.png"
+      }
+    ]
+  },
+  "plugins": {
+    "tencentvideo": {
+      "version": "1.1.8",
+      "provider": "wxa75efa648b60994b"
+    }
+  }
+}

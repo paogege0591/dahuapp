@@ -1,0 +1,127 @@
+
+.quan-area{
+  width: 100%;
+  position: fixed;
+  padding-left:30rpx;
+  background-color: #FFF;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 400rpx;
+  z-index: 1000;
+}
+.quan-option-picker-inner{
+  background:#fff;
+  border-top:2rpx solid #eee;
+}
+.quan-option-picker-cell{
+  padding-left:220rpx;
+  padding-top:20rpx;
+  position:relative;
+  padding-bottom: 20rpx;
+  box-shadow:0 0 8rpx rgba(0,0,0,0.1);
+}
+.quan-option-picker-btn{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 32rpx;
+  text-align: center;
+  background-color: #f55;
+  color: #FFF;
+}
+.quan-item{
+  width: 710rpx;
+  height: 100rpx;
+  padding: 15rpx 0;
+  margin: 15rpx 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+.quan-left{  
+  width: 210rpx;
+  height: 100rpx;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+.quan-left:after {
+  position: absolute;
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  background: #fff;
+  top: 30rpx;
+  right: -20rpx;
+  border-radius: 100%;
+}
+.quan-left:before {
+  position: absolute;
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  background: #fff;
+  top: 30rpx;
+  left: -20rpx;
+  border-radius: 100%;
+}
+.quan-money{
+  font-size: 34rpx;
+  width: 210rpx;
+  font-weight: bold;
+  height: 70rpx;
+  line-height: 35rpx;
+  display: table-cell;
+  vertical-align: middle;
+}
+.quan-condition{
+  font-size: 20rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.quan-mid{
+  width: 340rpx;
+  height: 100rpx;
+  line-height: 25rpx;
+  padding: 0 30rpx;
+  font-size: 20rpx;
+
+}
+.quan-right{
+  width: 160rpx;
+  height: 100rpx;
+}
+.quan-type{
+  font-size: 24rpx;
+  height: 50rpx;
+}
+.quan-shengyu{
+  height: 25rpx;
+  line-height: 25rpx;
+  font-size: 22rpx;
+  color: #ff9e40;
+}
+.quan-endtime{
+  height: 25rpx;
+  line-height: 25rpx;
+  font-size: 20rpx;
+  color: #999;
+}
+.quan-firmbtn{
+  padding:0 10rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-radius: 30rpx;
+  border-width: 1rpx;
+  border-style: solid;
+  display: inline-block;
+  font-size: 20rpx;
+  color: #ff9e40;
+  border-color: #ff9e40;
+}

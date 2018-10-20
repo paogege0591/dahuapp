@@ -1,0 +1,161 @@
+@import "../common/wuliu-picker.wxss";
+page{
+  background-color: #f7f7f7;
+}
+.navi-scroll{
+  background-color: #fff;
+  height: 80rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  line-height: 75rpx;
+  font-size: 32rpx;
+  white-space: nowrap;
+  z-index: 99;
+}
+.navitab{ 
+  width: 140rpx;
+  display: inline-block;
+  text-align: center;
+}
+.curtab{
+  color:#f55;
+  border-bottom:10rpx solid #f55;
+}
+.no-firm{
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.empty{
+  padding:260rpx 150rpx;
+  font-size:34rpx;
+}
+.light{
+  height:240rpx;
+  width:240rpx;
+}
+.text-cancel {
+  padding:10rpx;
+  margin-bottom:30rpx;
+  margin-top:25rpx;
+  font-size:30rpx;
+  color:#999;
+}
+.btn {
+  margin:0;
+  border-radius:100rpx;
+  height:76rpx;
+  line-height:76rpx;
+  width:280rpx;
+  font-size:30rpx;
+  padding:0;
+  box-sizing:border-box;
+  cursor:pointer;
+  font-family:inherit;
+  position:relative;
+  text-align:center;
+  text-decoration:none;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  user-select:none;
+  transition-duration:300ms;
+  transition-property:background-color;
+  display:inline-block;
+  z-index:100;
+}
+.btn-danger-o {
+  background:transparent;
+  color:#ff5555;
+  border:1px solid #ff5555;
+}
+.firm-item{
+  margin: 10rpx 0;
+  padding:0 20rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.line1{
+  font-size: 26rpx;
+  border-bottom: 1rpx solid #ddd;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #666;
+}
+.firmid{
+  display: inline-block;
+}
+.firmstatus{
+  float: right;
+}
+.line2{
+  font-size: 26rpx;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #ddd;
+  display: flex;
+  flex-direction: row;
+}
+.firmpic{
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 20rpx;
+}
+.firmname{
+  line-height: 40rpx;
+  width: 350rpx;
+  margin-right: 20rpx;
+}
+.firmname-item{
+  height:80rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.firmprice{
+  width: 160rpx;
+  height: 160rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  text-align: right;
+}
+.firmprice1{
+  height: 40rpx;
+}
+.firmprice2{
+  height: 40rpx;
+  color: #999
+}
+.line3{
+  font-size: 22rpx;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #ddd;
+  text-align: right;
+}
+.line4{
+  font-size: 26rpx;
+  padding: 20rpx 0;
+  text-align: right;
+}
+.firmbtn{
+  padding: 10rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-radius: 40rpx;
+  border-width: 1rpx;
+  border-style: solid;
+  display: inline-block;
+  margin:0 20rpx;
+}
+.firmcancel{
+  color: #ccc;
+  border-color: #000;
+}
+.firmpay{
+  color: #f55;
+  border-color: #f55;
+
+}
+
+

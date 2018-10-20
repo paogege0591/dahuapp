@@ -1,0 +1,214 @@
+/* 规格弹出层wxss */
+@import "../common/goods-picker.wxss";
+@import "../common/quan-picker.wxss";
+.lunbo{
+  height:700rpx;
+}
+.view1{
+  height: 260rpx;
+  padding:25rpx;
+  color: #666;
+}
+.pro_name{
+  display: inline-block;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  width: 600rpx;
+  height:56rpx;
+}
+.fenxiang{
+  font-size: 22rpx;
+  float:right;
+}
+.price{
+  margin-top:20rpx;
+}
+.sellnum{
+  font-size: 24rpx;
+  color:#979797;
+  margin-top:20rpx;
+}
+.fahuo{
+  font-size: 26rpx;
+  color: #666;
+}
+.yushou{
+  display: inline;
+  background-color: #17b407;
+  color: #fff;
+  margin: 10rpx;
+}
+.view2{
+  height:80rpx;
+  line-height: 80rpx;
+  padding-left: 25rpx; 
+  font-size: 26rpx;
+  color: #666;
+}
+.quan{
+  background-color: #ff5555;
+  color: #fff;
+  display: inline;
+  padding:0 8rpx;
+  margin:0 10rpx;
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+.bind-right{
+  float: right;
+  color:#999;
+  font-size:28rpx;
+  margin-right: 20rpx;
+}
+.view3{
+  padding: 20rpx;
+}
+.comment{
+  font-size: 28rpx;
+  line-height: 28rpx;
+  margin-top: 20rpx;
+}
+.commenttitle{
+  border-left: 10rpx solid #ff5555;
+  padding-left:10rpx;
+}
+.comment-list{
+  margin-top: 10rpx;
+  padding-top: 15rpx;
+  border-top: 1rpx solid #f0f0f0;
+}
+.usericon{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  background-color: #ff5555;
+  display: inline-block;
+}
+.username{
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  position: relative;
+  bottom: 15rpx;
+}
+.stars{
+  float:right;
+  color:#ff5555;
+  width:150rpx;
+  text-align: center;
+}
+.commentimg{
+  width:200rpx;
+  height:200rpx;
+  display: inline-block;
+  margin: 10rpx;
+}
+.commentall{
+  margin:30rpx 0;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.commentbtn{
+  padding:20rpx 40rpx;
+  border: 2rpx solid #eee;
+  border-radius: 90rpx 90rpx;
+}
+.view4{
+  margin-bottom: 80rpx;
+}
+.imgbox{
+  margin:10rpx 0;
+}
+.view-foot{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFF;
+  height:80rpx;
+  display: flex;
+  flex-direction: row;
+}
+.foot-left{
+  width:105rpx;
+  height:80rpx;
+  display: inline-block;
+  flex-direction: row;
+  color: #999;
+}
+.foot-left-icon{
+  text-align: center;
+  width:105rpx;
+  height: 80rpx;
+  display: inline-flex;
+  flex-direction: column;
+}
+.foot-left-word{
+  font-size: 20rpx;
+  line-height: 24rpx;
+  height: 24rpx;
+  position: fixed;
+  bottom:5rpx;
+}
+.kefu{
+  font-size:40rpx;
+  height: 40rpx;
+}
+.kefu1{
+  font-size:40rpx;
+  height: 40rpx;
+  position: relative;
+  left: 105rpx;
+  bottom: 7rpx;
+}
+.cart{
+  font-size: 50rpx;
+  height: 50rpx;
+  position: relative;
+  left: 105rpx;
+  bottom: 7rpx;
+}
+.cart-num{
+  background-color: #f00;
+  color: #FFF;
+  font-size: 26rpx;
+  line-height: 30rpx;
+  border-radius: 15rpx;
+  width:40rpx;
+  height:30rpx;
+  position: fixed;
+  bottom: 50rpx;
+  left: 270rpx;
+}
+.foot-mid{
+  background-color: #FF9411;
+  color: #FFF;
+  text-align: center;
+  width: 445rpx;
+  display: inline-block;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+.foot-right{
+  background-color: #F55;
+  color: #FFF;
+  text-align: center;
+  width: 200rpx;
+  display: inline-block;
+  line-height: 80rpx;
+  font-size: 30rpx;  
+}
+.back{
+  position: fixed;
+  right: 20rpx;
+  bottom: 100rpx;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 50rpx;
+  background-color: rgba(0,0,0,0.4);
+  color: #FFF;
+  text-align: center;
+  font-size: 30rpx;
+}
+

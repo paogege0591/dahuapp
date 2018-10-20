@@ -1,0 +1,62 @@
+<scroll-view scroll-x class="pic-scroll">
+  <view class='img-box' wx:for="{{row.store_images}}" wx:key="id">
+    <image src='{{item.images}}' class='full-pic'></image>
+  </view>
+  <!--
+  <view class='img-box'>
+    <image src='https://www.zydtest.cn/public/static/images/detail.png' class='full-pic'></image>
+  </view>
+  <view class='img-box'>
+    <image src='https://www.zydtest.cn/public/static/images/detail.png' class='full-pic'></image>
+  </view>
+  -->
+</scroll-view>
+
+<view class='area1'>
+  <view class='mendian-name'>
+  {{row.name}}
+  </view>
+  <view class='mendian-worktime'>
+  营业时间 {{row.business_hours}}
+  </view>
+</view>
+
+<view class=" page-section-gap">
+    <view class='mendian-location'>
+      <view style='display:inline-block'>{{row.position}}</view>   
+      <view class='daohang' bindtap='daohang' data-position="{{row.position}}" data-longitude="{{row.longitude}}" data-latitude="{{row.latitude}}">导航</view>
+    </view>
+
+    <map
+      id="myMap"
+      style="width: 100%; height: 300rpx;"
+      latitude="{{row.latitude}}"
+      longitude="{{row.longitude}}"
+      markers="{{markers}}"
+      covers="{{covers}}"
+      show-location
+    ></map>
+</view>
+
+<view class='area2'>
+  <view class='area2-item'>
+    <icon class='iconfont icon--'> 咨询</icon>
+  </view>|
+  <view class='area2-item'>
+    <icon class='iconfont icon-weibiaoti-' bindtap='call' data-telnum="{{row.tel}}"> 电话</icon>
+  </view>
+</view>
+
+<view class='area3'>
+  <view class='area3-1'>
+  服务信息
+  </view>
+  <view class='area3-2'>
+  营业时间 {{row.business_hours}}
+  </view>
+</view>
+
+<navigator class='area4' url='/pages/mendian/list'>
+  查看其它门店
+  <view class='area4-right'>></view>
+</navigator>

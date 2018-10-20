@@ -1,0 +1,32 @@
+/* 1像素解决方案 */
+/*
+ * 清除1px
+ */
+/*
+ * 清除浮动
+ */
+/*
+ * mobile
+ */
+/*
+ * 1px
+ */
+/*
+ * text
+ */
+/* 垂直居中 */
+/* 水平居中 */
+/* 水平垂直居中 */
+/* 超出部分出省略号 */
+/* 多行文本超出部分省略号 */
+.ui-col-content {
+  line-height: 100rpx;
+}
+.picarea {
+  border-radius: 75rpx;
+}
+.picarea image {
+  border-radius: 100rpx;
+  width: 90rpx;
+  height: 90rpx;
+}

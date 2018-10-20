@@ -1,0 +1,22 @@
+page{
+  background-color: #f7f7f7;
+}
+.article-item{
+  height: 200rpx;
+  background-color: #fff;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.article-img{
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 20rpx;
+}
+.article-title{
+  font-size: 30rpx;
+  line-height: 40rpx;
+  height: 180rpx;
+  margin: 10rpx;
+  width: 470rpx
+}

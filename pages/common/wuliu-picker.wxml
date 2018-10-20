@@ -1,0 +1,9 @@
+<view wx:if="{{wuliu_picker}}" class='wl-page'>
+<block wx:for="{{wuliu_list}}">
+  <view class="wl-item {{index==0?'wl-first':''}}">
+    <view class='wl-time'>{{item.AcceptTime}}</view>
+    <view class='wl-detail'>{{item.AcceptStation}}</view>
+  </view>
+</block>
+  <view class='wl-btn' bindtap='wl_cancle'>确定</view>
+</view>

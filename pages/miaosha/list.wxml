@@ -1,0 +1,14 @@
+<view class='ms_container'>
+  <block wx:for="{{ms_list}}">
+  <navigator class='ms_item' url="/pages/miaosha/goods_list?ms_id={{item.id}}">
+    <view class='ms_item_line1'>
+      <view class='ms_item_title'>{{item.title}}</view>
+      <view class='ms_item_comment'>{{item.comment}}</view>
+    </view>
+    <view class='ms_item_line2'>
+      <view class='ms_item_starttime'>开始时间：{{item.starttime}}</view>
+      <view class='ms_item_endtime'>结束时间：{{item.endtime}}</view>
+    </view>
+  </navigator>
+  </block>
+</view>

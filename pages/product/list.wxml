@@ -1,0 +1,58 @@
+<!-- 搜索框 -->
+<view class="searchView">
+  <view class="search">
+    <view class="searchItem">
+      <image src="../../images/icon_search.png" />
+      <input placeholder="搜索关键字"></input>
+    </view>
+  </view>
+  <view class="searchBtn">
+    <view class="Seabtn" bindtap="go_search" style="">搜索</view>
+  </view>
+</view>
+<view class="line"></view>
+
+<!-- 排序选项卡 -->
+<view class="tabTit box">
+  <view class="flex1{{!tab[index]?' active':''}}" wx:for="{{tabTxt}}" wx:key="type" data-index="{{index}}" bindtap="filterTab">
+    <text>{{item}}</text>
+    <image src="../../images/arrow.png"></image>
+  </view>
+</view>
+
+
+<view class="tabLayer" hidden="{{tab[0]}}">
+  <text class="{{option.cat_id==0?'active':''}}" data-id="0" data-index="0" data-txt="分类" bindtap="filter">分类</text>
+  <text class="{{option.cat_id==item.id?'active':''}}" wx:for="{{catList}}" wx:key="fl" wx:for-item="item" data-id="{{item.id}}" data-index="0" data-txt="{{item.name}}" bindtap="filter" style='overflow:hidden;'> {{item.name}} </text>
+</view>
+<view class="tabLayer" hidden="{{tab[1]}}">
+  <text class="{{option.intro==''?'active':''}}" data-id="0" data-index="1" data-txt="促销" bindtap="filter">促销</text>
+  <text class="{{option.intro==item.id?'active':''}}" wx:for="{{introList}}" wx:key="pp" wx:for-item="item" data-id="{{item.id}}" data-index="1" data-txt="{{item.title}}" bindtap="filter"> {{item.title}} </text>
+</view>
+<view class="tabLayer" hidden="{{tab[2]}}">
+  <text class="{{option.order==''?'active':''}}" data-id="0" data-index="2" data-txt="综合排序" bindtap="filter">综合排序</text>
+  <text class="{{option.order==item.id?'active':''}}" wx:for="{{order_list}}" wx:key='px' wx:for-item="item" data-id="{{item.id}}" data-index="2" data-txt="{{item.title}}" bindtap="filter"> {{item.title}} </text>
+  <!-- <text class="{{order==1?'active':''}}" data-id="1" data-index="2" data-txt="价格升序" bindtap="filter"> 价格升序</text>   
+      <text class="{{order==2?'active':''}}" data-id="2" data-index="2" data-txt="价格降序" bindtap="filter"> 价格降序</text>  
+      <text class="{{order==3?'active':''}}" data-id="3" data-index="2" data-txt="销量升序" bindtap="filter"> 销量升序</text> 
+      <text class="{{order==4?'active':''}}" data-id="4" data-index="2" data-txt="销量降序" bindtap="filter"> 销量降序</text>    -->
+</view>
+<!-- 排序选项卡       end-->
+
+<!-- 商品区域 -->
+<view class='pro-area'>
+  <view class='pro-item' wx:for="{{list}}" wx:key="index">
+    <navigator url="/pages/details/details?pro_id={{item.id}}">
+      <view class='pro-img'>
+        <image class='full-pic' src='{{item.img}}'></image>
+      </view>
+      <view class='pro-name'>{{item.goods_name}}</view>
+      <view class='pro-bottom'>
+        <view class='pro-bottom-left'>￥{{item.shop_price}}</view>
+        <view class='pro-bottom-right'>
+          <icon class='iconfont icon-gouwuche'></icon>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

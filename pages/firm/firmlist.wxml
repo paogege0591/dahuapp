@@ -1,0 +1,73 @@
+<scroll-view scroll-x class="navi-scroll">
+  <view data-tab='all' class="navitab {{curtab=='all'?'curtab':''}}" bindtap='changecur'>全部</view>
+  <view data-tab='dfk' class="navitab {{curtab=='dfk'?'curtab':''}}" bindtap='changecur'>待付款</view>
+  <view data-tab='dfh' class="navitab {{curtab=='dfh'?'curtab':''}}" bindtap='changecur'>待发货</view>
+  <view data-tab='dsh' class="navitab {{curtab=='dsh'?'curtab':''}}" bindtap='changecur'>待收货</view>
+  <view data-tab='dpj' class="navitab {{curtab=='dpj'?'curtab':''}}" bindtap='changecur'>待评价</view>
+  <!-- <view data-tab='thh' class="navitab {{curtab=='thh'?'curtab':''}}" bindtap='changecur'>退换货</view>
+  <view data-tab='ywc' class="navitab {{curtab=='ywc'?'curtab':''}}" bindtap='changecur'>已完成</view>
+  <view data-tab='hsz' class="navitab {{curtab=='hsz'?'curtab':''}}" bindtap='changecur'>回收站</view> -->
+</scroll-view>
+
+<!-- 没有订单 -->
+<view class='no-firm' wx:if='{{has_firm==0}}'>
+  <view class='empty'>
+    <image class='light' src='/static/image/nolist.png'></image>
+    <view class='text-cancel'>您暂时没有任何订单哦!</view>
+    <navigator class='btn btn-danger-o' open-type='switchTab' url='/pages/index/index'>去首页逛逛吧</navigator>
+  </view>
+</view>
+
+<!-- 有订单 -->
+<view class='has-firm' wx:if='{{has_firm}}' wx:for="{{list}}" wx:key="{{index}}">
+  <view class='firm-item'>
+    <view class='line1'>
+      <view class='firmid'>订单号:{{item.order_sn}}</view>
+      <view class='firmstatus'>{{item.order_status_desc}}</view>
+    </view>
+    <view class='line2' wx:if="{{item.order_goods}}" wx:for="{{item.order_goods}}" wx:for-item="vo">
+      <view class='firmpic'>
+        <image src='{{vo.goods_img}}' class='full-pic'></image>
+      </view>
+      <view class='firmname'>
+        <view class='firmname-item'>{{vo.goods_name}}</view>
+        <view class='firmname-item' wx:if="{{vo.spec_key_name}}">{{vo.spec_key_name}}</view>
+        <!-- 订单商品待评价-->
+        <!-- <view class='firmname-item' wx:if="{{item.order_status_desc == '待评价' && vo.is_comment == 0}}">待评价</view> -->
+      </view>
+      <view class='firmprice'>
+        <view class='firmprice1'>￥ {{vo.goods_price}}</view>
+        <view class='firmprice1'>￥ -{{vo.member_goods_price}}</view>
+        <view class='firmprice2'>x {{vo.goods_num}}</view>
+      </view>
+    </view>
+    <view class='line3'>
+       共{{item.order_goods.length}}个商品 实付<view style='display:inline;color:#f55;'>￥ {{item.order_amount}}(含运费￥+{{item.shipping_price}} 优惠券抵扣￥-{{item.coupon_price}})</view>
+    </view>
+    <view class='line4'>
+        <block wx:if="{{item.cancel_btn == 1}}">
+            <!-- 未付款的取消 -->
+            <view wx:if="{{item.pay_status == 0}}" class='firmcancel firmbtn' bindtap='cancel_order' data-order-id="{{item.id}}">取消订单</view>
+            <!-- 付款后的取消 -->
+            <navigator wx:if="{{item.pay_status == 1}}" class='firmcancel firmbtn' url='/pages/user/usercenter' open-type="switchTab">取消订单</navigator>
+        </block>
+        <!-- <view class='firmpay firmbtn'>支付订单</view> -->
+        <block wx:if="{{item.prom_type == 0}}">
+        <navigator wx:if="{{item.pay_btn == 1}}" class='firmpay firmbtn' url="/pages/subpay/subpay?order_id={{item.id}}&order_sn={{item.order_sn}}&money={{item.order_amount}}">立即付款</navigator>
+        </block>
+        <block wx:elif="{{item.prom_type == 1}}">
+        <navigator wx:if="{{item.pay_btn == 1}}" class='firmpay firmbtn' url="/pages/subpay/miaosha_subpay?order_id={{item.id}}&order_sn={{item.order_sn}}&money={{item.order_amount}}">立即付款</navigator>
+        </block>
+        <block wx:elif="{{item.prom_type == 2}}">
+        <navigator wx:if="{{item.pay_btn == 1}}" class='firmpay firmbtn' url="/pages/subpay/tuangou_subpay?order_id={{item.id}}&order_sn={{item.order_sn}}&money={{item.order_amount}}">立即付款</navigator>
+        </block>
+
+        <view wx:if="{{item.receive_btn == 1}}" class='firmcancel firmbtn' bindtap="sure" data-order-id="{{item.id}}">确认收货</view>
+        <!-- <view wx:if="{{item.comment_btn == 1}}" class='firmcancel firmbtn'>评价</view> -->
+        <navigator url="/pages/pingjia/pingjia?order_id={{item.id}}" wx:if="{{item.comment_btn == 1}}" class='firmcancel firmbtn'>评价</navigator>
+        <view wx:if="{{item.shipping_btn == 1}}" class='firmcancel firmbtn' bindtap='deliver' data-num="{{item.delivery_order[0].invoice_no}}" data-code="{{item.delivery_order[0].shipping_code}}">查看物流</view>
+    </view>
+  </view>
+</view>
+
+<include src='/pages/common/wuliu-picker.wxml'></include>

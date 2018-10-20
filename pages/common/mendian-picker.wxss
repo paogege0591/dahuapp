@@ -1,0 +1,42 @@
+.mendianlist-area{
+  padding:1rpx 30rpx;
+  background-color: #f3f3f3;
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.mendianlist-item{
+  margin: 30rpx 0;
+  background-color: #fff;
+  padding: 0 15rpx;
+  font-size: 24rpx;
+  color: #9f9f9f;
+}
+.mendianline1{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.mendianline1-name{
+  font-size: 36rpx;
+  font-weight: bold;
+  display: inline-block;
+  color: #000;
+}
+.mendianline1-dis{
+  float: right;
+}
+.mendianline2{
+  line-height: 40rpx;
+}
+.mendianchoosebtn{
+  height: 40rpx;
+  width: 60rpx;
+  border-radius: 40rpx;
+  background-color: #f55;
+  color: #fff;
+  float: right;
+  text-align: center;
+}

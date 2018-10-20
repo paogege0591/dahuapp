@@ -1,0 +1,37 @@
+<!--pages/waitcomment/waitcommentgoods.wxml-->
+<scroll-view scroll-x class="navi-scroll">
+  <view data-status='-1' class="navitab {{status == -1 ? 'curtab':''}}" bindtap='changecur'>全部评价</view>
+  <view data-status='0' class="navitab {{status == 0 ? 'curtab':''}}" bindtap='changecur'>待评价</view>
+  <view data-status='1' class="navitab {{status == 1 ? 'curtab':''}}" bindtap='changecur'>已评价</view>
+</scroll-view>
+
+<!-- 没有未评价的订单商品 -->
+<view class='no-firm' wx:if='{{has_firm==0}}'>
+  <view class='empty'>
+    <image class='light' src='/static/image/nolist.png'></image>
+    <view class='text-cancel'>您暂时没有相关的订单哦!</view>
+  </view>
+</view>
+
+<view class='has-firm' wx:if='{{has_firm}}' wx:for="{{list}}" wx:key="{{index}}">
+    <view class='firm-item'>
+        <view class='line2'>
+            <view class='firmpic'>
+                <image src='{{item.goods_img}}' class='full-pic'></image>
+            </view>
+            <view class='firmname'>
+                <view class='firmname-item'>{{item.goods_name}}</view>
+                <view class='firmname-item' wx:if="{{item.spec_key_name}}">{{item.spec_key_name}}</view>
+            </view>
+        </view>
+        <view class='line4'>
+            <navigator url="/pages/pingjia/pingjia?id={{item.id}}&goods_id={{item.goods_id}}&order_id={{item.order_id}}" wx:if="{{item.is_comment == 0}}" class='firmcancel firmbtn'>评价订单</navigator>
+
+            <navigator url="/pages/commentinfo/commentinfo?comment_id={{item.comment_id}}" wx:if="{{item.is_comment == 1}}" class='firmcancel firmbtn'>查看评价</navigator>
+        </view>
+    </view>
+</view>
+
+
+
+

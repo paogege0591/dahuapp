@@ -1,0 +1,247 @@
+<!-- 大湖小程序首页 -->
+<!-- 定位区域 -->
+<view class="distance dahu-red" bindtap='selectArea'>
+  <icon class="iconfont icon-location"></icon>{{position}}
+</view>
+
+<!-- 导航滚动条 -->
+<scroll-view scroll-x class="navi-scroll">
+  <navigator data-num="1" url="/pages/index/index" class="navitab {{_num==1?'curtab':''}}" bindtap="changecur">
+  首页
+  </navigator>
+  <navigator data-num="2" class="navitab {{_num==2?'curtab':''}}" bindtap="changecur" url="/pages/tuwen/content?type_id=4">
+  企业介绍
+  </navigator>
+  <navigator data-num="3" class="navitab {{_num==3?'curtab':''}}" bindtap="changecur" url='/pages/product/list?type=0&intro=is_recommend'>
+  推荐商品
+  </navigator>
+  <navigator data-num="4" class="navitab {{_num==4?'curtab':''}}" bindtap="changecur" url='/pages/product/list?type=0&intro=is_hot'>
+  促销商品
+  </navigator>
+  <navigator data-num="5" class="navitab {{_num==5?'curtab':''}}" bindtap="changecur" url='/pages/mendian/list'>
+  附近门店
+  </navigator>
+</scroll-view>
+
+<!-- 轮播图 -->
+<swiper autoplay circular interval="3000" duration="500" class="lunbo">
+  <block wx:for="{{navipic}}">
+    <swiper-item  >
+      <image src="{{item.picsrc}}" class="full-pic" bindtap='redirect' data-id="{{item.mapping_id}}"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 搜索框 -->
+<view class="search-box">
+  <icon type="search" bindtap='go_search'/>
+  <input placeholder-class="holder" placeholder="请输入关键字进行搜索" class="search-font" bindblur='set_keyword'/>
+</view>
+
+<!-- 热点 -->
+<view class="dahu-gray2">
+  <image src="https://www.dhdjk.net/static/admin/images/hotdot.jpg" style="height:30rpx;width:70rpx;margin-left:10rpx;"></image> |
+  <icon class="iconfont icon-xiaoxi hot-icon"></icon>
+  <view class='hot-news'>大湖上架新品优惠价9折从速购买</view>
+</view>
+
+<!-- 8个图标 -->
+<view>
+  <!-- <navigator class="circle-area" url='/pages/mendian/list'>
+    <view class="circle-icon dahu-bg-red">
+      <icon class="iconfont icon-weizhi mid"></icon>
+    </view>
+    <view class="circle-font">
+      附近门店
+    </view>
+  </navigator>
+  <navigator class="circle-area" url='/pages/tuwen/chuidiao'>
+    <view class="circle-icon dahu-bg-qing">
+      <icon class="iconfont icon-chuidiao mid"></icon>
+    </view>
+    <view class="circle-font">
+      垂钓乐园
+    </view>
+  </navigator>
+  <navigator class="circle-area" url='/pages/tuwen/taiji'>
+    <view class="circle-icon dahu-bg-black">
+      <icon class="iconfont icon-taiji mid"></icon>
+    </view>
+    <view class="circle-font">
+      太极乐园
+    </view>
+  </navigator> -->
+  <navigator class="circle-area" url='/pages/community/community'>
+    <view class="circle-icon dahu-bg-red2">
+      <icon class="iconfont icon-shequ mid"></icon>
+    </view>
+    <view class="circle-font">
+      用户社区
+    </view>
+  </navigator>
+  <navigator class="circle-area" url='/pages/product/list?type=0&intro=is_new'>
+    <view class="circle-icon dahu-bg-red3">
+      <icon class="iconfont icon-xinpin1 mid"></icon>
+    </view>
+    <view class="circle-font">
+      新品热销
+    </view>
+  </navigator>
+  <!-- <navigator class="circle-area" url='/pages/product/list?type=0&intro=is_hot'> -->
+  <navigator class="circle-area" url='/pages/tuangou/goods_list'>
+    <view class="circle-icon dahu-bg-shi2">
+      <icon class="iconfont icon-304 mid"></icon>
+    </view>
+    <view class="circle-font">
+      大湖团购
+    </view>
+  </navigator>
+  <navigator class="circle-area" url='/pages/tuwen/content?type_id=3'>
+    <view class="circle-icon dahu-bg-shi">
+      <icon class="iconfont icon-jiameng mid"></icon>
+    </view>
+    <view class="circle-font">
+      加盟招商
+    </view>
+  </navigator>
+  <!-- <view class="circle-area">
+    <view class="circle-icon dahu-bg-qing3">
+      <icon class="iconfont icon-tuangou mid"></icon>
+    </view>
+    <view class="circle-font">
+      团购秒杀
+    </view>
+  </view> -->
+  <!-- <navigator class="circle-area" url='/pages/scoreproduct/list'>
+    <view class="circle-icon dahu-bg-qing3">
+      <icon class="iconfont icon-jifen mid"></icon>
+    </view>
+    <view class="circle-font">
+      积分商城
+    </view>
+  </navigator> -->
+</view>
+<view class="clear"></view>
+<!-- 大湖秒杀 -->
+<navigator class='top40' url='/pages/miaosha/list'>
+  <view>
+    <view style="color:#FA444E;font-weight:bolder;font-family:宋体;display:inline;margin-left:20rpx;">大湖</view>
+    <view style="font-weight:bolder;font-family:宋体;display:inline;">秒杀</view>
+    <view class="miaosha-1">{{miaosha.changci}}</view>
+    <view class="miaosha-2">
+      {{countDownHour}} : {{countDownMinute}} : {{countDownSecond}}
+    </view>
+  </view>
+  <view class="clear"></view>
+  <!-- 秒杀产品6个 -->
+  <!-- <view class='top40'>
+    <view wx:for="{{miaoshapic}}" class="miaosha-item">
+      <image src="{{item.picsrc}}" class="miaosha-pic" bindtap='redirect'/>
+      <view class="miaosha-shoujia">￥{{item.shoujia}}</view>
+      <view class="miaosha-yuanjia">￥{{item.yuanjia}}</view>
+    </view>
+  </view> -->
+</navigator>
+
+<view class='clear'></view>
+
+<!-- 满减 -->
+<view class='top40' style='width:750rpx;height:300rpx;' wx:if="{{manjian}}">
+  <image src="{{manjian.img}}" class='full-pic'></image>
+</view>
+<!-- 优惠券 -->
+<!-- <view class='top40'>
+  <view class="quan" wx:for="{{quan}}">
+    <image src="{{item.picsrc}}" class="quan-pic"/>
+  </view>
+</view>
+<view class='clear'></view> -->
+<navigator class='top40 quan' url='/pages/quan/list?user_id={{user_id}}&type=all'>
+<block wx:for="{{quan}}">
+  <view class="quan-item {{item.style}}">
+    <view class='quan-money'>￥{{item.money}}</view>
+    <view class='get-btn'>立即领取</view>
+  </view>
+</block>
+</navigator>
+
+<view class='clear'></view>
+
+<!-- 视频 -->
+<view class='top40'>
+  <txv-video vid="h0128ri33o4" playerid="txv1" autoplay="{{false}}"></txv-video>
+</view>
+
+<!-- 推荐热卖商品 -->
+<view class='top40 dahu-bg-gray'>
+  <view class='dahu-bg-red4 rm-title'>
+    推荐热卖商品
+  </view>
+  <view class='top40'>
+    <view class='rm-pic4' wx:for="{{rmsp}}">
+    <navigator url="/pages/details/details?pro_id={{item.id}}">
+      <image src="{{item.picsrc}}" class='rm-pic4-pic'/>
+      <view class='rm-pic4-title'>{{item.title}}</view>
+      <view class='rm-pic4-content'>
+        <view class='rm-pic4-shoujia'>￥{{item.shoujia}}</view>
+        <view class='rm-pic4-yuanjia'>￥{{item.yuanjia}}</view>
+        <view class='rm-pic4-xiaoliang'>销量{{item.xiaoliang}}件</view>
+        <view class='rm-pic4-cart'><icon class="iconfont icon-gouwuche cart"></icon></view>
+      </view>
+    </navigator>
+    </view>
+  </view>
+  <view class='clear'></view>
+</view>
+
+
+<scroll-view scroll-x class="navi-scroll top40">
+    <block wx:for="{{category}}" wx:key="index">
+    <view data-id="{{item.id}}" style="width:30%" class="navitab {{cat_id == item.id ? 'curtab' : ''}}" bindtap="changecur2">
+        {{item.name}}
+    </view>
+    </block>
+</scroll-view>
+
+
+<view class='dahu-bg-gray'>
+  <view class='rm-pic4' wx:for="{{data}}">
+    <navigator url="/pages/details/details?pro_id={{item.id}}">
+        <image src="{{item.prosrc}}" class='rm-pic4-pic'/>
+        <view class='rm-pic4-title'>{{item.proname}}</view>
+        <view class='rm-pic4-content'>
+        <view class='rm-pic4-shoujia'>￥{{item.shop_price}}</view>
+        <view class='rm-pic4-yuanjia'>￥{{item.market_price}}</view>
+        <view class='rm-pic4-xiaoliang'>销量{{item.sales_sum}}件</view>
+        <view class='rm-pic4-cart'><icon class="iconfont icon-gouwuche cart"></icon></view>
+        </view>
+    </navigator>
+  </view>
+  <view class='clear'></view>
+</view>
+
+<view style='text-align:center;color:#5e5e5e;'>
+  <!-- <view class="rm-foot"><icon class="iconfont icon-wxbmingxingdianpu dahu-red"style="font-weight:bold;"></icon>推荐商品</view>| -->
+  <navigator class="rm-foot" url='/pages/product/list?type=0&intro=is_hot'><icon class="iconfont icon-wxbmingxingdianpu dahu-red"style="font-weight:bold;"></icon>推荐商品</navigator>|
+  <!-- <view class="rm-foot"><icon class="iconfont icon-gift dahu-red"></icon>会员充值</view> -->
+  <navigator url="/pages/recharge/recharge" class="rm-foot">
+  <icon class="iconfont icon-gift dahu-red"></icon>会员充值</navigator>
+</view>
+
+<!-- 会员充值 -->
+<!-- <view class='top40'>
+    <navigator url="/pages/recharge/recharge">
+    <icon class='iconfont icon-VIP vipbox'></icon>
+    <view class='recharge'>
+        会员充值
+    </view>
+    <view class='chakan'>
+        查看 >
+    </view>
+    </navigator>
+</view> -->
+
+<!-- 版权 -->
+<view class='copyright'>
+  <icon class='iconfont icon-banquan' style='font-size:38rpx;'></icon>  柳橙科技
+</view>

@@ -1,0 +1,73 @@
+/* 搜索框 */
+.search-box{
+   border:26rpx solid #f1f1f1;
+   height: 60rpx;
+}
+
+.search-icon{  
+   font-size:54rpx;
+   color:#999;
+}
+
+.search-font{
+  background-color:#fff;
+  width:90%;
+  display:inline-block;
+}
+
+.holder{
+  margin-left:10rpx;
+  color:#999;
+  font-size:32rpx;
+}
+
+/* 左侧菜单 */
+.left-menu{
+  width:210rpx;
+  background-color: #f9f9f9;
+  position:fixed;
+  bottom:0rpx;
+  top:160rpx;
+}
+.leftnavitab{
+  width:210rpx;
+  display: inline-block;
+  padding: 20rpx;
+  font-size: 28rpx;
+  color: #595959;
+}
+.leftcurtab{
+  /* border-left: 10rpx solid #ff5555; */
+  font-size:30rpx;
+  color: #ff5555;
+  line-height: 48rpx;
+  background-color: #FFF;
+}
+
+/* 右侧详情 */
+.right-detail{
+  position:fixed;
+  top:160rpx;
+  left:222rpx;
+  bottom: 0rpx;
+  overflow-y:scroll; 
+}
+.c_lunbo{
+  width:530rpx;
+  height: 275rpx;
+}
+.pro-item{
+  float:left;
+  width:176rpx;
+  margin-bottom:50rpx;
+}
+.pro-pic{
+  width:150rpx;
+  height:150rpx;
+  margin:13rpx;
+}
+.pro-name{
+  font-size: 26rpx;
+  color: #515151;
+  text-align: center;
+}

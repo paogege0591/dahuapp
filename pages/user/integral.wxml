@@ -1,0 +1,81 @@
+<view style='width:100%;height:100%;overflow-x:hidden'>
+  <!--积分  begin-->
+  <view class="header">
+    <view class="tit">积分</view>
+    <view class="titNum" style="font-size:72rpx;">
+      {{integral}}
+    </view>
+    <view class="iconView">
+      <view>
+        <i class="iconfont icon-quanbudingdan" style="font-size:38rpx;margin: 0rpx 12rpx;color:#fff"></i>
+      </view>
+      <view style="font-size:22rpx"> 积分规则</view>
+    </view>
+  </view>
+  <!--积分  end-->
+
+  <!--选项卡   begin-->
+  <view class="tabView">
+    <ui-tabs index="{{ current1 }}" bindchange="handleChange1" ink-bar="true" active-tab-style="{{activeTabStyle}}" ink-bar-style="{{inkBarStyle}}" _pid="{{_pid}}">
+      <ui-tab _pid="{{_pid}}">积分明细</ui-tab>
+      <ui-tab _pid="{{_pid}}">积分消费明细</ui-tab>
+    </ui-tabs>
+  </view>
+
+  <view class="contentView">
+
+    <swiper class="content" current="{{ current1 }}" bindchange="handleContentChange1" style="height:{{scrollHeight}}px;">
+      <swiper-item>
+        <navigator class="btn" url="/pages/scoreproduct/list">
+          <view style="text-align:center">进入积分商城</view>
+        </navigator>
+        <scroll-view scroll-y style="height:{{scrollHeight}}px;" scroll-top="{{scrollTop}}">
+          <view class="nullData" hidden="{{intDetail.length == 0 ? false : true}}">-暂无数据-</view>
+          <view class="ui-row-list ui-row-list-border-indent" style="">
+
+            <view style="height:100rpx;" wx:for="{{intDetail}}" class="ui-row">
+              <view class="text ui-col" style="color: #262626;">
+                <view class="ui-col-content">
+                  <view class="rowsup">{{item.comment}}</view>
+                  <view class="rowsub">{{item.time}}</view>
+                </view>
+              </view>
+              <view style="color:#3aac0d;flex:0 0 100px;text-align:right;" class="ui-col valign-middle">
+                <view class="ui-col-content valign-middle">
+                  +{{item.score_num}}
+                </view>
+              </view>
+            </view>
+            <hr />
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+      <swiper-item>
+        <scroll-view scroll-y style="height:{{scrollHeight}}px;" scroll-top="{{scrollTop}}">
+          <view class="nullData" hidden="{{consumeDetail.length == 0 ? false : true}}">-暂无数据-</view>
+          <view class="ui-row-list ui-row-list-border-indent" style="">
+            <view style="height:100rpx;" wx:for="{{consumeDetail}}" class="ui-row">
+              <view class="text ui-col" style="color: #262626;">
+                <view class="ui-col-content">
+                  <view class="rowsup">{{item.comment}}</view>
+                  <view class="rowsub">{{item.time}}</view>
+                </view>
+              </view>
+              <view style="color:#484848;flex:0 0 100px;text-align:right;" class="ui-col valign-middle">
+                <view class="ui-col-content valign-middle" style="color:#F55;">
+                  -{{item.score_num}}
+                </view>
+              </view>
+            </view>
+            <hr />
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+    </swiper>
+  </view>
+
+
+  <!--选项卡   end-->
+</view>

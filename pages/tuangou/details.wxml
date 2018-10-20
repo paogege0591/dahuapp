@@ -1,0 +1,109 @@
+<!-- 产品轮播图 -->
+<import src="/wxParse/wxParse.wxml"/>
+<swiper autoplay circular indicator-dots interval="5000" duration="500" class="lunbo">
+    <block wx:if="{{detail.goods_video}}">
+    <swiper-item>
+      <video class="full-pic" src="{{detail.goods_video}}" controls="true" autoplay="true"></video>
+    </swiper-item>
+    </block>
+  <block wx:for="{{detail.lunbo}}">
+    <swiper-item>
+      <image src="{{item.picsrc}}" class="full-pic" mode="aspectFit" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='view1 border-bt20'>
+  <view class='pro_name'>{{detail.pro_name}}　{{detail.options[0].options[0].option_name}}</view>
+  <view class='fenxiang'>
+    <icon class='iconfont icon-fenxiang' style='font-size:36rpx;color:#ff5555;'></icon>
+    分享
+  </view>
+  <view class='price dahu-red'>￥{{detail.price}}</view>
+  <view class='sellnum'>
+    原价：￥{{detail.old_price}}
+  </view>
+  <view class='fahuo top40' wx:if="{{detail.presell == 1}}">
+    <view class='yushou'>预售</view> 预计发货: {{detail.begin_time}}
+  </view>
+</view>
+
+
+
+<view class='view3 border-bt20'>
+  <view class='comment'>
+    <text class='commenttitle'> 评价（{{detail.comment_count}}）</text>
+    <view style='float:right;color:#747474;'>
+    好评度 <view style='color:#ff5555;display:inline;'>{{detail.rating}}</view>
+    </view>
+  </view>
+  <block wx:for="{{detail.comments}}">
+    <view class='comment-list'>
+      <view>
+        <view class='usericon'>
+          <image src='{{item.avatar}}' class='usericon'></image>
+        </view>
+        <text class='username'>{{item.nickname}}</text>
+        <view class='stars'>
+          <icon class='iconfont icon-xing'></icon>
+          <icon class="iconfont icon-xing {{item.star<2?'disNone':''}}"></icon>
+          <icon class="iconfont icon-xing {{item.star<3?'disNone':''}}"></icon>
+          <icon class="iconfont icon-xing {{item.star<4?'disNone':''}}"></icon>
+          <icon class="iconfont icon-xing {{item.star<5?'disNone':''}}"></icon>
+        </view>  
+      </view>
+      <view style='font-size:28rpx;'>
+        {{item.content}}
+      </view>
+
+      <view> 
+        <block wx:for="{{item.comment_photo}}" wx:for-item="vo">
+          <image src='{{vo.img}}' class='commentimg'></image>
+        </block>
+      </view>
+    </view>
+  </block>
+  <view class='commentall'>
+    <text class='commentbtn'>查看全部评价</text>
+  </view>
+</view>
+
+<view class='view4'>
+<!--
+  <block wx:for="{{detail.detail_img}}" wx:key="key">
+    <view class='imgbox'>
+     {{key}} <image src="{{item.imgpath}}" style='width:100%;'></image>
+    </view>
+  </block>
+-->
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+
+<view class='view-foot'>
+  <view class='foot-left'>
+    <button open-type="contact" class='foot-left-icon' style='background-color:#FFF;position:fixed;bottom:0;color:#999;line-height:40rpx;'>
+      <icon class='iconfont icon-kefu kefu'></icon>
+      <text class='foot-left-word' style='left:30rpx;'>客服</text>
+    </button>
+  </view>
+  <view class='foot-mid' bindtap='joinShopCart'>
+    <block wx:if="{{miaosha_status==0}}">
+      {{endtitle}}
+    </block>
+    <block wx:if="{{miaosha_status==2}}">
+      {{endh}}:{{endm}}:{{ends}}后结束
+    共{{detail.group_num}}/剩{{detail.kucun}}
+    </block>
+  </view>
+
+  <view class='foot-right' bindtap='gotopay' wx:if="{{miaosha_status==2}}">
+    立刻购买
+  </view>
+
+  <view class='foot-right' style='background-color:#999;' wx:else="{{miaosha_status==2}}">
+    无法购买
+  </view>
+</view> 
+
+<navigator url='/pages/index/index' class='back' open-type='switchTab'>首页</navigator>
+<include src='/pages/common/goods-picker.wxml'></include>

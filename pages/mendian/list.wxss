@@ -1,0 +1,73 @@
+
+.search-box{
+  width:90%;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 30rpx ;
+  background-color: #efefef;
+  color: #9f9f9f;
+  font-size: 30rpx;
+  display: inline-block;
+}
+.holder{
+  color: #9f9f9f;
+  font-size: 30rpx;
+  line-height: 60rpx;
+}
+.search-icon{  
+  width: 10%;
+  font-size:50rpx;
+  color:#9f9f9f;
+}
+
+.search-font{
+  width:80%;
+  display:inline-block;
+}
+.liebiao-icon{
+  height: 60rpx;
+  font-size: 44rpx;
+  line-height: 60rpx;
+  width: 8%;
+  margin-left: 2%;
+  color: #bbb;
+}
+.list-area{
+  padding:1rpx 30rpx;
+  background-color: #f3f3f3;
+}
+.list-item{
+  margin: 30rpx 0;
+  background-color: #fff;
+  padding: 0 15rpx;
+  font-size: 24rpx;
+  color: #9f9f9f;
+}
+.line1{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.line1-name{
+  font-size: 36rpx;
+  font-weight: bold;
+  display: inline-block;
+  color: #000;
+}
+.line1-dis{
+  float: right;
+}
+.line2{
+  line-height: 40rpx;
+}
+.line3{
+  margin-top: 20rpx;
+  border-top: 1rpx solid #e7e7e7;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.line3-icon{
+  font-size: 26rpx;
+  width: 165rpx;
+  text-align: center;
+  color: #666;
+}

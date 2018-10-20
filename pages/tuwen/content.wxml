@@ -1,0 +1,38 @@
+<!-- 标题 -->
+<import src="/wxParse/wxParse.wxml"/>
+<view class='title-area'>
+ {{detail.title}}
+</view>
+
+<view class='content-area' wx:if="{{type_id != 5}}">
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+
+<view class='content-area' wx:else>
+    <view class='article-item'>
+    <view class='line1'>
+      <view class='article-usericon'>
+        <image src='{{detail.get_user.avatar}}' class='full-pic article-usericon'></image>
+      </view>
+      <view class='article-username'>
+        <view class='username-1'>
+          {{detail.get_user.nickname ? detail.get_user.nickname : detail.get_user.username}}
+        </view>
+        <view class='username-2'>
+          {{detail.time_diff}} | {{detail.address}}
+        </view>
+      </view>
+    </view>
+    <view class='line2'>
+      <view class='article-img' wx:if="{{detail.article_photo}}">
+        <block wx:for="{{detail.article_photo}}" wx:for-item="vo">
+            <view class='half-pic' bindtap="showImage" data-url="{{vo.url}}"><image src='{{vo.url}}' mode="aspectFit" class='full-pic'></image></view>
+        </block>
+        <!-- <image src='{{vo.url}}' class='half-pic'></image> -->
+      </view>
+      <view class='article-content'>
+        {{detail.content}}
+      </view>
+    </view>
+  </view>
+</view>

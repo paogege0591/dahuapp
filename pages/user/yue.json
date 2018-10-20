@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#f55",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "余额明细",
+  "usingComponents": {
+    "ui-tabs": "../../packages/touchui-wx-components/ui-tabs/dist/index",
+    "ui-tab": "../../packages/touchui-wx-components/ui-tab/dist/index"
+  }
+}

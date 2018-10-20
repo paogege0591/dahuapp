@@ -1,0 +1,63 @@
+<view class='sub-line1'>
+  <view class='sub-line1-item'>
+    <view class='order-num-money'>订单编号</view>
+    <view class='num-detail'>{{order_sn}}</view>
+  </view>
+  <view class='sub-line1-item'>
+    <view class='order-num-money'>订单金额</view>
+    <view class='money-detail'>￥{{money}}</view>
+  </view>
+</view>
+
+<view class='sub-line2'>
+  <view class='sub-line2-item' bindtap='wxpay'>
+    <view class='item-icon'><icon class='iconfont icon-icon4' style='font-size:70rpx;color:#4bb50e;'></icon></view>
+    <view class='sub-line2-mid'>
+      <view class='sub-pay-mode'>微信支付</view>
+      <view class='sub-pay-ye'><icon class='iconfont icon-anquan' style='color:#69f;font-size:40rpx;'></icon>微信安全支付</view>
+    </view>
+    <view class='sub-line2-right'>></view>
+  </view>
+  <view class='sub-line2-item' bindtap='showpwd'>
+    <view class='item-icon'><icon class='iconfont icon-zhifu' style='font-size:70rpx;color:#ff843f;font-weight:bold;'></icon></view>
+    <view class='sub-line2-mid'>
+      <view class='sub-pay-mode'>余额支付</view>
+      <!-- <view class='sub-pay-ye'>当前余额：<view style='color:#f55; display:inline;'>￥1986.60</view></view> -->
+      <view class='sub-pay-ye'>当前余额：<view style='color:#f55; display:inline;'>￥{{account_balance}}</view></view>
+    </view>
+    <view class='sub-line2-right'>></view>
+  </view>
+</view>
+
+<!-- 余额支付 -->
+<!-- <view wx:if="{{pay_type==2}}">
+  <view class='lucent' bindtap='hidepwd'></view>
+  <view class='pwdarea'>
+    <view class='pwd-title'>余额支付</view>
+    <view class='pwd-input'>
+      <input type="number" password="true" placeholder='请输入支付密码' placeholder-class='pwd-input-holder' class='pwd-input-area' bindinput='savepwd'></input>
+    </view>
+    <view class='pwd-btn'>
+      <view class='cancel' bindtap='hidepwd'>取消支付</view>
+      <view class='notcancel' bindtap='checkpwd'>确认支付</view>
+    </view>
+  </view>
+</view> -->
+<view wx:if="{{pay_type==2}}">
+  <view class='lucent' bindtap='checkpwd'></view>
+
+  <form bindsubmit="checkpwd" report-submit='true'>
+  <view class='pwdarea'>
+    <view class='pwd-title'>余额支付</view>
+    <view class='pwd-input'>
+      <input type="number" password="true" placeholder='请输入支付密码' placeholder-class='pwd-input-holder' class='pwd-input-area' bindinput='savepwd'></input>
+    </view>
+    <view class='pwd-btn'>
+      <view class='cancel' bindtap='hidepwd'>取消支付</view>
+      <!-- <view class='notcancel' bindtap='checkpwd'>确认支付</view> -->
+      <button class='notcancel' formType="submit">确认支付</button>
+    </view>
+  </view>
+  </form>
+
+</view>

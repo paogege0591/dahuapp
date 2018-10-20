@@ -1,0 +1,24 @@
+<view wx:if="{{addr_picker}}" class='addr-picker'>
+  <view class='foot-add' bindtap='add_addr'>
+  + 添加收货地址
+  </view>
+
+  <view class='addr-box'>
+    <block wx:for="{{recievers}}">
+      <view class='addr-item'>
+        <view class='line1'>
+          <view class='addr-name'>
+          {{item.name}}　　{{item.telnum}}
+          </view>
+          <view class='addr-addr'>
+          {{item.address}}
+          </view>
+        </view>
+        <view class='line2' data-index="{{index}}" bindtap='setaddr'>
+          选择地址
+        </view>
+        <view class='clear'></view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,50 @@
+<block wx:if="{{already_checked||!old_mobile}}">
+  <view class='form-area'>
+    <view class='form-item'>
+      <view class='form-title'>手机号</view>
+      <view class='form-content'>
+        <input class='form-input' type='number' maxlength='11' placeholder='请输入您的手机号码' bindblur='settel'></input>
+      </view>
+      <view class='yzm'>
+        <view class='hqyzm' wx:if='{{time==0}}' bindtap='get_code'>获取验证码</view>
+        <view class='djs' wx:if='{{time>0}}'>{{time}}</view>
+      </view>
+    </view>
+
+    <view class='form-item'>
+      <view class='form-title'>验证码</view>
+      <view class='form-content'>
+        <input class='form-input' type='number' maxlength='11' placeholder='请输入验证码' bindblur='setcode'></input>
+      </view>
+    </view>
+  </view>
+
+  <view class='bind-btn' bindtap='bind_tel'>
+    确认绑定
+  </view>
+</block>
+<block wx:else>
+  <view class='form-area'>
+    <view class='form-item'>
+      <view class='form-title'>原手机号</view>
+      <view class='form-content'>
+        {{old_mobile}}
+      </view>
+      <view class='yzm' style="margin-right:0rpx;">
+        <view class='hqyzm' wx:if='{{time==0}}' bindtap='get_code'>获取验证码</view>
+        <view class='djs' wx:if='{{time>0}}'>{{time}}</view>
+      </view>
+    </view>
+
+    <view class='form-item'>
+      <view class='form-title'>验证码</view>
+      <view class='form-content'>
+        <input class='form-input' type='number' maxlength='11' placeholder='请输入验证码' bindblur='setcode'></input>
+      </view>
+    </view>
+  </view>
+
+  <view class='bind-btn' bindtap='check_oldmobile'>
+    修改号码
+  </view>
+</block>

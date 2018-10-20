@@ -1,0 +1,141 @@
+page{
+  background-color: #f7f7f7;
+}
+.edit{
+  float: right;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+.cart-area{
+  background-color: #fff;
+}
+.pro-item{
+  padding: 20rpx;
+  height:160rpx;
+  display: flex;
+  flex-direction: row;
+}
+.checkradio{
+  height: 160rpx;
+  line-height: 160rpx;
+  width: 80rpx;
+}
+.pro-img{
+  width: 160rpx;
+  height: 160rpx;
+}
+.pro-detail{
+  height: 160rpx;
+  width: 300rpx;
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.pro-name{
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}
+.pro-guige{
+  color: #999;
+  font-size: 26rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.pro-price1{
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.pro-price2{
+  color: #f55;
+  width: 150rpx;
+}
+.pro-price3{
+  width: 150rpx;
+}
+.pro-num{
+  font-size: 20rpx;
+  line-height: 40rpx;
+  height: 160rpx;
+}
+.foot-area{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #eee;
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.allradio{
+  width: 80rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+}
+.footall{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  width: 80rpx;
+}
+.footcount{
+  height: 80rpx;
+  width: 200rpx;
+  margin-left: 200rpx;
+  display: flex;
+  flex-direction: column;
+}
+.foot-money{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 26rpx;
+  text-align: right;
+}
+.money{
+  color: #f55;
+  display: inline;
+}
+.footyunfei{
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 20rpx;
+  color: #999;
+  text-align: right;
+}
+.footbuy{
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #f55;
+  color: #fff;
+  text-align: center;
+  font-size: 32rpx;
+  width: 150rpx;
+  margin-left: 20rpx;
+}
+.is_failure{
+  font-size: 25rpx;
+}
+.delbtn{
+  font-size: 30rpx;
+  margin: 15rpx 0;
+  line-height: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  width: 100rpx;
+  margin-left: 30rpx;
+  border-radius: 25rpx;
+  background-color: #f55;
+  color: #fff;
+}

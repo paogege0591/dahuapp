@@ -1,0 +1,252 @@
+@import "../common/mendian-picker.wxss";
+@import "../common/addr-picker.wxss";
+@import "../common/fapiao-picker.wxss";
+@import "../common/quan-picker.wxss";
+.reciever-area{
+  padding: 30rpx 0;
+  width: 100%;
+  border-top: 20rpx solid #f8f8f8;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.icon-area{
+  width: 100rpx;
+  height: 90rpx;
+  float: left;
+  text-align: center;
+  line-height: 90rpx;
+}
+.reciever-name-telnum{
+  font-weight: bold;
+  font-size: 30rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+}
+.reciever-addr{
+  font-size: 26rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  color: #888;
+}
+.reciever-right{
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #ddd;
+  float: right;
+  margin-right: 20rpx;
+}
+.reciever-add{
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size:26rpx;
+  text-align: center;
+}
+.add{
+  display: inline-block;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 15rpx;
+  border: 1rpx solid #f55;
+  color: #f55;
+  font-size: 30rpx;
+  line-height: 30rpx;
+}
+.add-text{
+  display: inline-block;
+  font-size: 30rpx;
+  margin-left: 15rpx;
+}
+.peisong{
+  padding: 20rpx;
+}
+.peisong-title{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.peisong-right{
+  float: right;
+  color: #53d768;
+  text-align: center;
+}
+.peisong-mendian{
+  font-size: 26rpx;
+}
+.radio-group {
+    border-bottom: 1px solid #f8f8f8;
+    font-size: 28rpx;
+}
+.radio {
+    display: block;
+    padding: 5px;
+}
+.mendian-msg{
+  font-size: 24rpx;
+  color: #53d768; 
+  display: inline;
+  margin-left: 20rpx;
+}
+.proshow{
+  padding: 20rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction:row;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.propic{
+  width: 160rpx;
+}
+.promid{
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  height: 160rpx;
+  width: 350rpx;
+}
+.proname{
+  height: 80rpx;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+.pro-spec{
+  height: 40rpx;
+  font-size: 24rpx;
+  color: #888;
+}
+.pro-price{
+  color: #f55;
+}
+.pro-right{
+  font-size: 24rpx;
+  width: 200rpx;
+  height: 160rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+.price{
+  font-size: 30rpx;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40rpx;
+  height: 40rpx;
+}
+.num{
+  font-size: 30rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 1rpx solid #ddd;
+  width: 150rpx;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+.mius,.plus{
+  width: 50rpx;
+  background-color:#f8f8f8; 
+}
+.num1{
+  width: 50rpx;
+  border-left: 1rpx solid #ddd;
+  border-right: 1rpx solid #ddd;
+}
+.quan-fapiao{
+  padding: 20rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.quan-fapiao-item{
+  height: 125rpx;
+  margin: 15rpx;
+}
+.right-more{
+  float: right;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #000;
+  font-size: 50rpx;
+}
+.quan-fapiao-title{
+  font-size: 26rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+}
+.quan-fapiao-mode{
+  font-size: 32rpx;
+  font-weight: bold;
+  height: 45rpx;
+  line-height: 45rpx;
+}
+.quan-fapiao-taxnum{
+  font-size: 22rpx;
+  color: #666;
+  height: 45rpx;
+  line-height: 45rpx;
+}
+.liuyan{
+  padding: 20rpx;
+  height: 140rpx;
+  display: flex;
+  flex-direction:row;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.liuyan-left,liuyan-right{
+  height: 140rpx;
+  margin: 10rpx;
+}
+.liuyan-left{
+  width: 140rpx;
+  font-size: 24rpx;
+}
+.liuyan-right{
+  width: 550rpx;
+}
+.price-area{
+  border-top: 20rpx solid #f8f8f8;
+  border-bottom: 10rpx solid #f8f8f8;
+  padding:0 20rpx;
+  margin-bottom: 80rpx;
+}
+.price-pro{
+  font-size: 28rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #f8f8f8;
+}
+.price-pro-left{
+  display: inline-block;
+  width: 150rpx;
+  color: #7f7f7f;
+}
+.price-pro-right{
+  margin-right: 20rpx;
+  float: right;
+}
+.view-foot{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFF;
+  height:80rpx;
+  line-height: 80rpx;
+}
+.foot-mid{
+  font-size: 28rpx;
+  margin-left: 300rpx;
+  width: 225rpx;
+  display: inline-block;
+}
+.foot-price{
+  display: inline;
+  color: #F55;
+}
+.foot-right{
+  font-size: 28rpx;
+  background-color: #F55;
+  color: #FFF;
+  text-align: center;
+  margin-left: 25rpx;
+  width: 200rpx;
+  display: inline-block;
+}
+

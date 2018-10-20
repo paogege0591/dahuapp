@@ -1,0 +1,89 @@
+<!-- 搜索框 -->
+<view class="searchView">
+  <view class="search">
+    <view class="searchItem">
+      <image src="../../images/icon_search.png" />
+      <input placeholder="搜索关键字"></input>
+    </view>
+  </view>
+  <view class="searchBtn">
+    <view class="Seabtn" bindtap="go_search" style="">搜索</view>
+  </view>
+</view>
+<view class="line"></view>
+
+<!-- 左侧菜单 -->
+<!--
+<view class='left-menu'>
+  <block wx:for="{{detail}}">
+    <view  data-num="{{item.id}}" class="leftnavitab {{_num==item.id?'leftcurtab':''}}" bindtap="changeleftcur">
+      {{item.title}}
+    </view>
+  </block>
+</view>
+-->
+
+<view class='left-menu'>
+  <block wx:for="{{category_menu}}" wx:key="index">
+    <view data-id="{{item.id}}" data-image="{{item.image}}" class="leftnavitab {{menuid == item.id? 'leftcurtab' : ''}}" bindtap="switchTab">
+      {{item.name}}
+    </view>
+  </block>
+</view>
+
+
+<!-- 右侧详情 -->
+<!--
+<view class='right-detail'>
+  <view>
+    <block wx:for="{{detail}}">
+      <view style="{{_num==item.id?'':'display:none;'}}">
+        
+        <swiper autoplay circular interval="3000" duration="500" class="c_lunbo">
+          <block wx:for="{{item.lunbo}}">
+            <swiper-item>
+              <image src="{{item.picsrc}}" class='full-pic'/>
+            </swiper-item>
+          </block>
+        </swiper>
+        
+        <view>
+          <block wx:for="{{item.prodetail}}">
+            <navigator class='pro-item' url='/pages/details/details?pro_id={{item.pro_id}}'>
+              <image src="{{item.prosrc}}" class='pro-pic'/>
+              <view class='pro-name'>{{item.proname}}</view>
+            </navigator>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+-->
+
+<view class='right-detail'>
+  <view>
+      <!-- <view style="{{menuid == item.id?'':'display:none;'}}"> -->
+      <view>
+        <!-- 轮播图 -->
+        <swiper autoplay circular interval="3000" duration="500" class="c_lunbo">
+            <swiper-item>
+              <image src="{{menuImage}}" class='full-pic'/>
+            </swiper-item>
+        </swiper>
+        <!-- 详情 -->
+        <view>
+          <block>
+              <view hidden="{{list.length == 0 ? false : true}}" style='text-align:center;color:#666;margin-top:20rpx'>~暂无数据~</view>
+          </block>
+          <block wx:for="{{list}}">
+            <navigator class='pro-item' url='/pages/details/details?pro_id={{item.id}}'>
+              <image src="{{item.prosrc}}" class='pro-pic'/>
+              <view class='pro-name'>{{item.proname}}</view>
+            </navigator>
+          </block>
+        </view>
+      </view>
+    <!-- </block> -->
+  </view>
+</view>

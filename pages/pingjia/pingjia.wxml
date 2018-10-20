@@ -1,0 +1,33 @@
+<view class='article-title'>
+  <view class='article-left'><view class='article-left-in'>评星</view></view>
+  <view class='article-input-title'>
+    <icon class='iconfont icon-xingxing1 pj-xing' data-index='1' bindtap='changescore' style="color:{{score<1?'#ededed;':'#ffcc00'}};"></icon>
+    <icon class='iconfont icon-xingxing1 pj-xing' data-index='2' bindtap='changescore' style="color:{{score<2?'#ededed;':'#ffcc00'}};"></icon>
+    <icon class='iconfont icon-xingxing1 pj-xing' data-index='3' bindtap='changescore' style="color:{{score<3?'#ededed;':'#ffcc00'}};"></icon>
+    <icon class='iconfont icon-xingxing1 pj-xing' data-index='4' bindtap='changescore' style="color:{{score<4?'#ededed;':'#ffcc00'}};"></icon>
+    <icon class='iconfont icon-xingxing1 pj-xing' data-index='5' bindtap='changescore' style="color:{{score<5?'#ededed;':'#ffcc00'}};"></icon>
+  </view>
+</view>
+
+<view class='article-content'>
+  <view class='article-left'><view class='article-left-in'>内容</view></view>
+  <textarea placeholder='请输入内容' class='article-text' maxlength='-1' auto-height bindblur='save_content'></textarea>
+</view>
+
+<view class='article-img'>
+  <view class='article-left'><view class='article-left-in'>图片</view></view>
+  <!-- <block wx:for="{{img_msg}}">
+    <view class='add-img' bindtap='addimg' data-index="{{index}}" wx:if="{{!item}}">+</view>
+    <view class='add-img' wx:if="{{item}}" data-index="{{index}}" bindlongpress='delimg'>
+      <image src="{{item.tempFilePaths[0]}}" class='full-pic' mode="aspectFit"></image>
+    </view>
+  </block>   -->
+  <block wx:for="{{img_msg}}">
+    <view class='add-img' bindtap='addimg' data-index="{{index}}" wx:if="{{!item}}">+</view>
+    <view class='add-img' wx:if="{{item}}" data-index="{{index}}" bindlongpress='delimg'>
+      <image src="{{item}}" class='full-pic' mode="aspectFit"></image>
+    </view>
+  </block>
+</view>
+
+<view class='sub-article' bindtap='sub_article'>发布</view>
