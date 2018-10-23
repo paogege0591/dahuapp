@@ -29,10 +29,17 @@ Page({
     goodsIntegral: []
   },
   navigator: function navigator(e) {
-    var catid = e.currentTarget.dataset.catid;
-    wx.navigateTo({
-      url: '/pages/product/list?type=0&cat_id='+catid
-    });
+    var catid = e.currentTarget.dataset.catid, intro = e.currentTarget.dataset.intro;
+    if(catid>0){
+      wx.navigateTo({
+        url: '/pages/product/list?&cat_id=' + catid
+      });
+    }else{
+      wx.navigateTo({
+        url: '/pages/product/list?&intro=' + intro
+      });
+    }
+    
   },
   onLoad: function () {
     var that = this, latitude = 0, longitude = 0;

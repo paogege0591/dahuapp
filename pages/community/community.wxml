@@ -87,5 +87,5 @@
 
 
 <navigator class='add-article' url='/pages/community/addarticle'>
-  <view style='margin-top:-10rpx;'>+</view>
+  <icon class='iconfont icon-wuuiconxiangjifangda' style='color:#69f;font-size:100rpx;'></icon>
 </navigator>

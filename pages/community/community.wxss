@@ -155,7 +155,7 @@ page{
   bottom: 80rpx;
   left: 325rpx;
   z-index: 999;
-  background-color: #69f;
+  /* background-color: #69f; */
   color: #fff;
   width: 100rpx;
   height: 100rpx;

@@ -28,11 +28,11 @@
 
   <view style="width:95%;margin:0rpx  auto">
     <view class="list">
-      <navigator class="card" url='/pages/product/list?type=0&intro=is_hot'>
+      <!-- <navigator class="card" url='/pages/product/list?intro=is_hot'>
         <image src="https://www.dhdjk.net/uploads/wxapp/appimg/banner1.jpg" mode="widthFix"/>
-      </navigator>
+      </navigator> -->
       <view wx:for="{{banner}}" class="card">
-        <image src="{{item.picpath}}" bindtap="navigator" data-catid="{{item.id}}" mode="widthFix" />
+        <image src="{{item.picpath}}" bindtap="navigator" data-intro="{{item.intro}}" data-catid="{{item.id}}" mode="widthFix" />
       </view>
     </view>
     <view style="height:400rpx;width:100%;margin-top:20rpx">      
