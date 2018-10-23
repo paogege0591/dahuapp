@@ -37,7 +37,7 @@
   <view class="userContainer">
     <!--用户权益  begin-->
     <view class="userInterest">
-      <view style='width:98%;margin:0rpx;display:flex'>
+      <!-- <view style='width:98%;margin:0rpx;display:flex'> -->
           <view class="userInterest-card">
             <navigator url='/pages/user/integral'>
               <view class="userInterest-num">
@@ -73,7 +73,7 @@
             </navigator>
           </view>
 
-          <view class="userInterest-card">
+          <view class="userInterest-card" style='flex:1.2;'>
             <navigator url="">
               <view class="userInterest-img userInterest-zhuangs" style="">
                 <!--  <image src="../../images/zhuangs.png"> -->
@@ -81,7 +81,7 @@
               <view class="userInterest-text">全部会员权益</view>
             </navigator>
           </view>
-      </view>
+      <!-- </view> -->
     </view>
     <!--用户权益 end-->
 
@@ -106,14 +106,16 @@
           <view class="firm-box">
             <view  class="firm-item">
               <navigator url='/pages/firm/firmlist?curtab=dfk'>
-                <icon class="iconfont icon-qianbao-copy" style="font-size:54rpx;color:#dc9f45;"></icon>
+                <view style='position:relative;z-index:0;backgound:#fff'>
+                  <view class="iconfont icon-qianbao-copy" style="font-size:54rpx;color:#dc9f45;"></view>
+                </view>
                 <view class="qipaonum" hidden="{{status_count_dfk == 0 ? true : false}}">{{status_count_dfk}}</view>
                 <view class="firm-name">待付款</view>
               </navigator>
             </view>
             <view  class="firm-item">
               <navigator url='/pages/firm/firmlist?curtab=dfh'>
-                <icon class="iconfont icon-daifahuo" style="font-size:54rpx;color:#dc9f45;"></icon>
+                <icon class="iconfont icon-gerenzhongxin-daifahuo" style="font-size:52rpx;color:#dc9f45;margin-top:5rpx"></icon>
                 <view class="qipaonum" hidden="{{status_count_dfh == 0 ? true : false}}">{{status_count_dfh}}</view>
                 <view class="firm-name">待发货</view>
               </navigator>
@@ -187,7 +189,11 @@
     <!--为您推荐  begin-->
     <view class="Recommend">
       <view style='font-size:27rpx'>
-        <ui-divider padding="20" _pid="{{_pid}}">为您推荐</ui-divider>
+        <!--<ui-divider padding="20" _pid="{{_pid}}">为您推荐</ui-divider>-->
+        <view class='RecommentLine'></view>
+        <view style='width:34%;color:#9b9b9b;float:left;text-align:center'>为您推荐</view>
+        <view class='RecommentLine'></view>
+        <view style='clear:both'></view>
       </view>
       <navigator class="recommendImg" wx:for="{{recommend}}" url="/pages/details/details?pro_id={{item.mapping_id}}">
         <image src="{{item.picsrc}}" mode="widthFix" style='width:100%'/>

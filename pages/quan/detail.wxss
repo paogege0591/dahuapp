@@ -28,7 +28,7 @@
 .button{
   width: 360rpx;
   font-size: 24rpx;
-  height: 60rpx;
+  height: 78rpx;
   line-height: 60rpx;
   margin: auto;
   color: #ff6c00;
@@ -36,6 +36,7 @@
   border: 8rpx solid #794300;
   border-radius: 60rpx;
 }
+
 .area2{
   margin: 40rpx;
   border: 2rpx solid #999;
@@ -57,8 +58,9 @@
 .area2-line3{
   padding: 20rpx;
   line-height: 40rpx;
-  height: 80rpx;
+  height: 115rpx;
 }
 .font-bold{
   font-weight: bold;
 }
+

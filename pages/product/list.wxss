@@ -109,7 +109,9 @@
   width: 20rpx;
   height: 13rpx;
   vertical-align: middle;
-  margin-left: 10rpx;
+  /* margin-left: 10rpx; */
+  margin-left:195rpx;
+  margin-top:-50rpx;
 }
 
 .tabLayer {

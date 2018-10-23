@@ -6,7 +6,7 @@ page{
 }
 .quan-item{
   width: 710rpx;
-  height: 100rpx;
+  /* height: 100rpx; */
   padding: 15rpx 0;
   margin: 15rpx 0;
   background-color: #fff;
@@ -15,7 +15,7 @@ page{
 }
 .quan-left{  
   width: 210rpx;
-  height: 100rpx;
+  height: 123rpx;
   position: relative;
   text-align: center;
   color: #fff;

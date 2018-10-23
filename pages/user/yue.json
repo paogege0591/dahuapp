@@ -1,6 +1,6 @@
 {
   "backgroundTextStyle": "light",
-  "navigationBarBackgroundColor": "#f55",
+  "navigationBarBackgroundColor": "#f75b5b",
   "navigationBarTextStyle": "white",
   "navigationBarTitleText": "余额明细",
   "usingComponents": {

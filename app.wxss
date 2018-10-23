@@ -793,7 +793,7 @@ button {
   padding: 0rpx 15rpx;
 }
 .Seabtn {
-  font-size: 32rpx;
+  font-size: 30rpx;
   text-align: center;
   height: 60rpx;
   background: #f04343;

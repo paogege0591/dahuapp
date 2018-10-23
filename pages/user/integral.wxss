@@ -57,7 +57,7 @@ page {
   width: 100%;
   text-align: center;
   color: #a9a9a9;
-  margin-top: 25rpx;
+  margin-top: 65rpx;
 }
 .tit,
 .titNum {

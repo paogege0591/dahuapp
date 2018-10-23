@@ -18,10 +18,10 @@
 
 <scroll-view scroll-x class="navi-scroll">
   <view data-num="1" url="/pages/index/index" class="navitab {{_num==1?'curtab':''}}" bindtap="changecur">
-  商城
+    <view>商城</view>
   </view>
   <navigator data-num="2" class="navitab {{_num==2?'curtab':''}}" bindtap="changecur"  url='/pages/community/community'>
-  社区
+    <view>社区</view>
   </navigator>
 </scroll-view>
 
@@ -72,7 +72,7 @@
     </view>
     <!--关于大湖  end-->
 
-    <navigator style="height:400rpx;width:100%;margin:20rpx 0rpx;" url='/pages/user/infoset'>
+    <navigator style="height:400rpx;width:100%;margin:20rpx 0px;box-shadow:1px 2rpx 1px #d3d3d3;border-radius:10rpx" url='/pages/user/infoset'>
       <image src="https://www.dhdjk.net/uploads/wxapp/appimg/joinRemeber.jpg"/>
     </navigator>
 
@@ -128,7 +128,7 @@
       <view class="PointsShoppingTitCh">积 分 兑 换 商 城</view>
       <!--轮播  begin-->
       <view class="promotionView">
-        <swiper indicator-dots class="three_swiper section icons" circular current="0" indicator-color="rgba(51, 51, 51, 0.3)" indicator-active-color="#ff2a00">
+        <swiper indicator-dots class="three_swiper section icons  iconss" circular current="0" indicator-color="rgba(51, 51, 51, 0.3)" indicator-active-color="#ff2a00">
           <swiper-item wx:for="{{goodsIntegral}}" wx:for-item="list2" wx:key="id">
             <view class="icon iconImg" wx:for="{{list2}}" wx:for-item="icon2" wx:key="id" bindtap="toNearby">
               <navigator url="/pages/scoreproduct/details?pro_id={{icon2.id}}">
@@ -144,7 +144,7 @@
       <navigator class="moreText" url='/pages/scoreproduct/list'>更多</navigator>
     </view>
     <!--积分兑换商城  POINTS EXCHANGE  end-->
-
+    <view style='width:100%;height:15rpx'></view>
 
   </view>
 

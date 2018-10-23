@@ -53,6 +53,20 @@ Page({
       tel = that.data.tel,
       code = that.data.code,
       user_id = app.globaldata.uid;
+    if (tel.length != 11) {
+      wx.showToast({
+        title: '请输入正确手机号',
+        icon: 'none'
+      });
+      return false;
+    }
+    if (code.length != 6) {
+      wx.showToast({
+        title: '验证码长度为6',
+        icon: 'none'
+      });
+      return false;
+    }
     wxRequest({
       url: app.globaldata.site_url + "user_center/bind",
       data: { mobile: tel, code: code, user_id: user_id },
@@ -87,10 +101,7 @@ Page({
   settel: function (e) {
     var that = this, tel = e.detail.value;
     if (tel.length != 11) {
-      wx.showToast({
-        title: '请输入正确手机号',
-        icon: 'none'
-      });
+      return false;
     } else {
       that.setData({
         tel: tel
@@ -101,10 +112,6 @@ Page({
   setcode: function (e) {
     var that = this, code = e.detail.value;
     if (code.length != 6) {
-      wx.showToast({
-        title: '验证码长度为6',
-        icon: 'none'
-      });
       return false;
     }
     that.setData({

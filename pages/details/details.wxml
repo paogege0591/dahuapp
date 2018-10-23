@@ -16,7 +16,7 @@
 <view class='view1 border-bt20'>
   <view class='pro_name'>{{detail.pro_name}}</view>
   <view class='fenxiang' bindtap='totalShare'>
-    <icon class='iconfont icon-fenxiang' style='font-size:36rpx;color:#ff5555;'></icon>
+    <icon class='iconfont icon-fenxiang1' style='font-size:30rpx;color:#ff5555;'></icon>
     分享
   </view>
   <view class='price dahu-red'>￥{{per_price}}</view>
@@ -123,7 +123,7 @@
     
     <view class='foot-left-icon' bindtap='attention' data-pro-id="{{pro_id}}" data-user-id="{{user_id}}">
       <icon class="iconfont {{detail.attention == 1 ? 'icon-aixin dahu-red' : 'icon-aixin1'}} kefu1"></icon>
-      <text class='foot-left-word' style='left:135rpx;'>关注</text>
+      <text class='foot-left-word' style='left:137rpx;'>收藏</text>
     </view>
 
     <view class='foot-left-icon'>

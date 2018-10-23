@@ -76,6 +76,12 @@ scroll-view {
   background: #efefef;
   /*border-bottom: 1rpx solid #aaa;*/
 }
+
+.header .search{
+  overflow-y:hidden;
+  background:#efefef;
+  height:50rpx;
+}
 .starContent {
   padding: 100rpx 100rpx 0rpx 100rpx;
 }
@@ -83,11 +89,15 @@ scroll-view {
   padding: 100rpx;
 }
 .icons {
-  height: 450rpx;
+  height: 425rpx;
   padding: 20rpx 10rpx;
   padding-bottom: 0;
   background: #fff;
   border-radius: 20rpx;
+}
+
+.iconss{
+  height:400rpx;
 }
 .icons swiper-item {
   width: 100%;
@@ -129,19 +139,39 @@ scroll-view {
   column-gap: 10rpx;
   margin: 0 auto;
 }
-.card {
+/* .card {
   display: inline-block;
   width: 98%;
   height: 100%;
   overflow: auto;
   margin-bottom: 8rpx;
+} */
+.card {
+  display: inline-block;
+  width: 98%;
+  height: 100%;
+  overflow: auto;
+  margin-bottom: 6rpx;
+  box-shadow: 0rpx 2rpx 1rpx #d3d3d3;
+  border-radius: 10rpx;
 }
-.aboutDahu {
+/* .aboutDahu {
   box-shadow: 0px 5rpx 10rpx #d3d3d3;
   height: 100%;
   width: 100%;
   border-radius: 20rpx;
   background: #fff;
+} */
+.aboutDahu {
+  box-shadow: 0px 4rpx 1px #d3d3d3;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rpx;
+  background: #fff;
+}
+.broadcast{
+  background: #fff;
+  border-radius: 10rpx;
 }
 .moreText {
   color: #313131;
@@ -153,6 +183,7 @@ scroll-view {
   padding: 0px 20rpx;
   line-height: 60rpx;
 }
+
 .couponTit {
   font-size: 38rpx;
   line-height: 100rpx;
@@ -167,30 +198,32 @@ scroll-view {
 }
 .promotionTitCh {
   font-size: 34rpx;
-  color: #7a7a7a;
+  color: #4a4a4a;
   line-height: 50rpx;
-  border: 2rpx solid #000;
+  border: 2rpx solid #4a4a4a;
   text-align: center;
   width: 200rpx;
-  margin: 20rpx auto;
+  margin: 0rpx auto;
+  margin-bottom: 25rpx;
 }
 .promotionView {
-  box-shadow: 0px 2rpx 10px #d3d3d3;
+  box-shadow: 0px 1rpx 1px #d3d3d3;
   height: 100%;
   width: 100%;
-  border-radius: 20rpx;
+  border-radius: 10rpx;
 }
 .promotion {
   margin-bottom: 40rpx;
 }
 .PointsShoppingTitCh {
   font-size: 34rpx;
-  color: #7a7a7a;
+  color: #4a4a4a;
   line-height: 50rpx;
-  border: 2rpx solid #000;
+  border: 2rpx solid #4a4a4a;
   text-align: center;
   width: 300rpx;
-  margin: 20rpx auto;
+  margin: 0rpx auto;
+  margin-bottom: 25rpx;
 }
 .PointsShopping {
   margin-bottom: 60rpx;
@@ -275,7 +308,10 @@ view.searchItem input {
   font-size: 32rpx;
   white-space: nowrap;
   z-index: 99;
+  width: 95%;
+  margin: 0px auto;
   margin-bottom:20rpx;
+  font-size: 29rpx;
 }
 
 .navitab{ 
@@ -284,9 +320,15 @@ view.searchItem input {
   text-align: center;
 }
 
-.curtab{
+
+
+.curtab view{
   color:#EF4F4F;
+  font-size:32rpx;
   border-bottom:10rpx solid #EF4F4F;
+  width:85rpx;
+  margin: 0px auto;
+
 }
 /* 1像素解决方案 */
 /*

@@ -39,7 +39,7 @@
   margin: 10rpx;
 }
 .view2{
-  height:80rpx;
+  height:100rpx;
   line-height: 80rpx;
   padding-left: 25rpx; 
   font-size: 26rpx;
@@ -137,7 +137,7 @@
 .foot-left-icon{
   text-align: center;
   width:105rpx;
-  height: 80rpx;
+  height: 66rpx;
   display: inline-flex;
   flex-direction: column;
 }

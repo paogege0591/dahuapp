@@ -1,6 +1,14 @@
 
 <view class='clear'></view>
 
+<view hidden="{{cart_detail.length == 0 ? false : true}}">
+    <view style='padding-top:180rpx;widthL:100%;text-align:center'>
+        <view style='font-size:40rpx;color:#666;margin-bottom:30rpx'>购物车是空的哦~~</view>
+        <view style='font-size:30rpx;color:#afafaf;margin-bottom:30rpx'>快去挑点宝贝吧</view>
+        <navigator class='More_btn' open-type='switchTab' url='/pages/categories/categories'>去逛逛</navigator>
+    </view>
+</view>
+
 <view class='cart-area'>
   <block wx:for="{{cart_detail}}">
     <view class='pro-item'>

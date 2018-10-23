@@ -16,7 +16,7 @@
 <view class='view1 border-bt20'>
   <view class='pro_name'>{{detail.pro_name}}</view>
   <view class='fenxiang'>
-    <icon class='iconfont icon-fenxiang' style='font-size:36rpx;color:#ff5555;'></icon>
+    <icon class='iconfont icon-fenxiang1' style='font-size:36rpx;color:#ff5555;'></icon>
     分享
   </view>
   <view class='price dahu-red'>{{per_score}}积分</view>

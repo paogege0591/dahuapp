@@ -20,21 +20,28 @@ page{
 }
 .form-input{
   position: relative;
-  top:18rpx;
+  /* top:18rpx; */
+  height: 90rpx;
+  line-height: 90rpx;
 }
 .yzm{
   float: right;
-  height: 40rpx;
-  line-height: 40rpx;
-  margin: auto;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin:0px auto;
   text-align: center;
 }
 .hqyzm{
-  width: 180rpx;
-  border-radius: 40rpx;
-  border: 1rpx solid #f55;
-  background-color: #f55;
-  color: #FFF;
+  width:180rpx;
+  border-radius:7rpx;
+  border:1rpx solid #f55;
+  background-color:#f55;
+  color:#FFF;
+  border-radius:7rpx;
+  height:60rpx;
+  line-height:60rpx;
+  margin-top: 15rpx;
+
 }
 .djs{
   width: 180rpx;
@@ -42,6 +49,9 @@ page{
   border: 1rpx solid #ccc;
   background-color: #ccc;
   color: #FFF;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 15rpx;
 }
 .bind-btn{
   height: 80rpx;
