@@ -440,6 +440,24 @@ Page({
       fapiao;
     that.set_manjian();
     console.log(JSON.parse(postpay));
+    console.log(app.globaldata.userinfo)
+    if (app.globaldata.userinfo.level_id<=1){
+      wx.showModal({
+        title: '温馨提示',
+        content: '您的身份是游客，完善个人资料后可升级至普通会员。游客无法获得或使用积分',
+        cancelText: '先等等',
+        confirmText: '去完善',
+        success: function (r) {
+          if (r.confirm) {
+            wx.navigateTo({
+              url: '/pages/user/infoset',
+            })
+          } else {
+            console.log(321);
+          }
+        }
+      })
+    }
 
     that.setData({
       postpay: postpay,

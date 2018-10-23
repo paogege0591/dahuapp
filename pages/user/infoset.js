@@ -103,6 +103,10 @@ exports.default = Page({
       });
       return false;
     }
+    wx.showToast({
+      title: '正在发送...',
+      icon: 'loading'
+    });
     wxRequest({
       url: app.globaldata.site_url + "user_center/getCode",
       data: { mobile: mobile, type: 'new_tel' },

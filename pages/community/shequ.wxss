@@ -148,3 +148,26 @@ textarea {
   margin: 15rpx;
   background-color: #f7f7f7;
 }
+
+.repl{
+  background:#f9f9f9;
+  padding:10rpx 10rpx;
+  display: flex;
+  width:95%;
+  border:1px solid #eae8e0;
+  margin:15rpx 0px;
+  margin-left:5%;
+}
+.reply-nickname{
+  color: #888;
+  height: 50rpx;
+  flex: .4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.reply-content{
+  color: #888;
+  flex: 1
+}

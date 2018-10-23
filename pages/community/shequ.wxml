@@ -62,9 +62,9 @@
               </span>
             </view>
           </view>
-          <view wx:if="{{item.preply}}">
-            {{item.preply.nickname}}
-            {{item.preply.content}}
+          <view wx:if="{{item.preply}}" class='repl'>
+            <view class='reply-nickname'>{{item.preply.nickname}}:</view>
+            <view class='reply-content'>{{item.preply.content}}</view>
           </view>
           <view class="commentLiuyan">
             {{item.content}}
