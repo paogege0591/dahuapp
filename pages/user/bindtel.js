@@ -15,11 +15,18 @@ Page({
     already_checked: false,
     old_mobile: ''
   },
-  check_oldmobile:function(){
+  check_oldmobile: function () {
     var that = this,
-        mobile = that.data.old_mobile,
-        code = that.data.code,
-        user_id = app.globaldata.uid;
+      mobile = that.data.old_mobile,
+      code = that.data.code,
+      user_id = app.globaldata.uid;
+    if (code.length != 6) {
+      wx.showToast({
+        title: '验证码长度为6',
+        icon: 'none'
+      });
+      return false;
+    }
     wxRequest({
       url: app.globaldata.site_url + "user_center/checkMobile",
       data: { mobile: mobile, code: code, user_id: user_id },
@@ -27,21 +34,21 @@ Page({
       header: {
         "content-type": "application/x-www-form-urlencoded"
       },
-    }).then(function(res) {
-      if( res.data.code !=1){
+    }).then(function (res) {
+      if (res.data.code != 1) {
         wx.showToast({
           title: res.data.msg,
-          icon:'none'
+          icon: 'none'
         });
         return false;
-      }else{
+      } else {
         wx.showToast({
           title: res.data.msg,
           icon: 'none',
-          success:function(){
+          success: function () {
             that.setData({
-              already_checked:true,
-              time:1
+              already_checked: true,
+              time: 1
             })
           }
         })
@@ -84,7 +91,7 @@ Page({
             setTimeout(function () {
               wx.navigateBack({
                 delta: 1,
-              }) 
+              })
             }, 1500);
           }
         });
@@ -120,14 +127,25 @@ Page({
   },
 
   get_code: function (e) {
-    var that = this, tel = that.data.tel, already_checked = that.data.already_checked,old_mobile = that.data.old_mobile;
+    var that = this, tel = that.data.tel, already_checked = that.data.already_checked, old_mobile = that.data.old_mobile;
     // console.log(tel);
     // return false;
     if (already_checked || !old_mobile) {
       // 验证新手机
+      if (tel.length != 11) {
+        wx.showToast({
+          title: '请输入正确手机号',
+          icon: 'none'
+        });
+        return false;
+      }
+      wx.showToast({
+        title: '正在发送...',
+        icon: 'loading'
+      });
       wxRequest({
         url: app.globaldata.site_url + "user_center/getCode",
-        data: { mobile: that.data.tel,type:'new_tel' },
+        data: { mobile: that.data.tel, type: 'new_tel' },
         method: 'GET',
         header: {
           'Content-Type': 'application/json'
@@ -161,8 +179,12 @@ Page({
           });
         }
       })
-    }else{
+    } else {
       // 验证老号码
+      wx.showToast({
+        title: '正在发送...',
+        icon: 'loading'
+      });
       wxRequest({
         url: app.globaldata.site_url + "user_center/getCode",
         data: { mobile: that.data.old_mobile },
