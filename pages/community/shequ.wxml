@@ -62,6 +62,10 @@
               </span>
             </view>
           </view>
+          <view wx:if="{{item.preply}}">
+            {{item.preply.nickname}}
+            {{item.preply.content}}
+          </view>
           <view class="commentLiuyan">
             {{item.content}}
           </view>
