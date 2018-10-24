@@ -111,9 +111,9 @@ exports.default = Page({
       }
     })    
     // 使页面滚动到底部
-    wx.pageScrollTo({
-      scrollTop: 10000
-    })
+    // wx.pageScrollTo({
+    //   scrollTop: 10000
+    // })
   },
   pinglun_dianzan: function dianzan(e) {
     var that = this,

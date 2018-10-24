@@ -31,7 +31,7 @@ page{
   font-size:34rpx;
 }
 .light{
-  height:240rpx;
+  height:100rpx;
   width:240rpx;
 }
 .text-cancel {
